@@ -16,3 +16,5 @@ int main()
     fun(x);
     return 0;
 }
+
+//day 1 of actual recursion with love babbar dsa series 
