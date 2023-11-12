@@ -36,33 +36,59 @@
 
 // Fibonacci series using recursion
 
+// #include <iostream>
+// using namespace std;
+
+// void Fibo(int t1, int n, int t2, int count)
+// {
+//     // int count = 0;
+//     if (count == n)
+//     {
+//         return;
+//     }
+
+//     int nextTerm = t1 + t2;
+//     t1 = t2;
+//     t2 = nextTerm;
+
+//     count++;
+
+//     Fibo(t1, n, t2, count);
+// }
+
+// int main()
+// {
+
+//     int n;
+//     cin >> n;
+//     int t1 = 0;
+//     int t2 = 1;
+//     int count = 0;
+//     Fibo(t1, n, t2, count);
+// }
+
+// above code is wrong
+
 #include <iostream>
 using namespace std;
 
-void Fibo(int t1, int n, int t2, int count)
+int fib(int n)
 {
-    // int count = 0;
-    if (count == n)
+    if (n == 0)
     {
-        return;
+        return 0;
     }
-
-    int nextTerm = t1 + t2;
-    t1 = t2;
-    t2 = nextTerm;
-
-    count++;
-
-    Fibo(t1, n, t2, count);
+    if (n == 1)
+    {
+        return 1;
+    }
+    int ans = fib(n - 1) + fib(n - 2);
+    return ans;
 }
 
 int main()
 {
-
     int n;
     cin >> n;
-    int t1 = 0;
-    int t2 = 1;
-    int count = 0;
-    Fibo(t1, n, t2, count);
+    cout << fib(n);
 }
