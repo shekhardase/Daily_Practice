@@ -119,6 +119,8 @@ using namespace std;
 
 bool isArraySorted(const vector<int> &arr, int idx)
 {
+
+    //base case 
     if (idx == arr.size() - 1)
     {
         return true;
@@ -135,7 +137,7 @@ bool isArraySorted(const vector<int> &arr, int idx)
 int main()
 {
     vector<int> exampleArray = {1, 2, 3, 4, 5};
-    cout << boolalpha << isArraySorted(exampleArray, 0) << endl; // Output: true
+    cout << boolalpha << isArraySorted(exampleArray, 0) << endl;
 
     return 0;
 }
