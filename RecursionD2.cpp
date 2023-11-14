@@ -70,38 +70,72 @@
 // above code is wrong
 
 // below new fibonacci number series using recursion
+// #include <iostream>
+// using namespace std;
+
+// int fib(int n)
+// {
+//     if (n == 0)
+//     {
+//         return 0;
+//     }
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     int ans = fib(n - 1) + fib(n - 2);
+//     return ans;
+// }
+
+// // sum of n numbers using recursion
+// int sum(int n)
+// {
+//     if (n == 0)
+//     {
+//         return 0;
+//     }
+
+//     return n + sum(n - 1);
+// }
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     cout << fib(n) << endl;
+//     cout << sum(n) << endl;
+// }
+
+
+
+
+
+// checking if array is sorted or not
+
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
-int fib(int n)
+bool isArraySorted(const vector<int> &arr, int idx)
 {
-    if (n == 0)
+    if (idx == arr.size() - 1)
     {
-        return 0;
-    }
-    if (n == 1)
-    {
-        return 1;
-    }
-    int ans = fib(n - 1) + fib(n - 2);
-    return ans;
-}
-
-// sum of n numbers using recursion
-int sum(int n)
-{
-    if (n == 0)
-    {
-        return 0;
+        return true;
     }
 
-    return n + sum(n - 1);
+    if (arr[idx] > arr[idx + 1])
+    {
+        return false;
+    }
+
+    return isArraySorted(arr, idx + 1);
 }
 
 int main()
 {
-    int n;
-    cin >> n;
-    cout << fib(n) << endl;
-    cout << sum(n) << endl;
+    vector<int> exampleArray = {1, 2, 3, 4, 5};
+    cout << boolalpha << isArraySorted(exampleArray, 0) << endl; // Output: true
+
+    return 0;
 }
