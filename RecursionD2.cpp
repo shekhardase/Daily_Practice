@@ -121,17 +121,17 @@ bool isArraySorted(const vector<int> &arr, int idx)
 {
 
     //base case 
-    if (idx == arr.size() - 1)
+    if (idx == arr.size() - 1)          //check if  index is greater than actual size we checking for array
     {
         return true;
     }
 
-    if (arr[idx] > arr[idx + 1])
-    {
+    if (arr[idx] > arr[idx + 1])      // checking if sorted or not 
+    {                                 // checking index is greater than index + 1 
         return false;
     }
 
-    return isArraySorted(arr, idx + 1);
+    return isArraySorted(arr, idx + 1);     //calling function again and again increasing index value for next index to be check
 }
 
 int main()
