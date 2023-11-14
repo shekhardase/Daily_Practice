@@ -69,6 +69,7 @@
 
 // above code is wrong
 
+// below new fibonacci number series using recursion
 #include <iostream>
 using namespace std;
 
@@ -86,9 +87,21 @@ int fib(int n)
     return ans;
 }
 
+// sum of n numbers using recursion
+int sum(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+
+    return n + sum(n - 1);
+}
+
 int main()
 {
     int n;
     cin >> n;
-    cout << fib(n);
+    cout << fib(n) << endl;
+    cout << sum(n) << endl;
 }
