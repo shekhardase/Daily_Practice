@@ -106,38 +106,92 @@
 //     cout << sum(n) << endl;
 // }
 
-
-
-
-
 // checking if array is sorted or not
 
-#include <iostream>
-#include <vector>
+// #include <iostream>
+// #include <vector>
 
+// using namespace std;
+
+// bool isArraySorted(const vector<int> &arr, int idx)
+// {
+
+//     // base case
+//     if (idx == arr.size() - 1) // check if  index is greater than actual size we checking for array
+//     {
+//         return true;
+//     }
+
+//     if (arr[idx] > arr[idx + 1]) // checking if sorted or not
+//     {                            // checking index is greater than index + 1
+//         return false;
+//     }
+
+//     return isArraySorted(arr, idx + 1); // calling function again and again increasing index value for next index to be check
+// }
+
+// int main()
+// {
+//     vector<int> exampleArray = {1, 2, 3, 4, 5};
+//     vector<int> exampleArray2 = {1, 2, 3, 4, 2};
+//     cout << boolalpha << isArraySorted(exampleArray, 0) << endl;
+//     cout << boolalpha << isArraySorted(exampleArray2, 0) << endl;
+
+//     return 0;
+// }
+
+// making a function to check if array is palindrome or not using recurison (On my Own as homework)
+
+// #include<iostream/
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// bool Ispalindrome(const vector<int> &arr, int idx)
+// {
+//     if (arr[0] != arr[idx])
+//     {
+//         return false;
+//     }
+
+//     if (arr[0] == arr[idx])
+//     {
+//         return true;
+//     }
+
+//     return Ispalindrome(arr, idx + 1);
+// }
+
+// int main()
+// {
+//     vector<int> array = {1, 2, 3, 4, 50};
+//     cout << Ispalindrome(array, 0);
+// }
+
+// above code is totally wrong but not approach i should use two variables start and end to follow the index of aray
+
+#include <bits/stdc++.h>
 using namespace std;
 
-bool isArraySorted(const vector<int> &arr, int idx)
+bool IsPalindrome(const vector<int> &arr, int start, int end)
 {
-
-    //base case 
-    if (idx == arr.size() - 1)          //check if  index is greater than actual size we checking for array
+    if (start >= end)
     {
         return true;
     }
 
-    if (arr[idx] > arr[idx + 1])      // checking if sorted or not 
-    {                                 // checking index is greater than index + 1 
+    if (arr[start] != arr[end])
+    {
         return false;
     }
 
-    return isArraySorted(arr, idx + 1);     //calling function again and again increasing index value for next index to be check
+    IsPalindrome(arr, start + 1, end - 1);
 }
 
 int main()
 {
-    vector<int> exampleArray = {1, 2, 3, 4, 5};
-    cout << boolalpha << isArraySorted(exampleArray, 0) << endl;
-
+    vector<int> array = {1, 2, 2, 1};
+    bool result = IsPalindrome(array, 0, array.size() - 1);
+    cout << result << endl;
     return 0;
 }
+
