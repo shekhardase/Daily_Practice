@@ -169,29 +169,56 @@
 
 // above code is totally wrong but not approach i should use two variables start and end to follow the index of aray
 
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// bool IsPalindrome(const vector<int> &arr, int start, int end)
+// {
+//     if (start >= end)
+//     {
+//         return true;
+//     }
+
+//     if (arr[start] != arr[end])
+//     {
+//         return false;
+//     }
+
+//    return IsPalindrome(arr, start + 1, end - 1);
+// }
+
+// int main()
+// {
+//     vector<int> array = {1, 2, 2, 1};
+//     bool result = IsPalindrome(array, 0, array.size() - 1);
+//     cout << result << endl;
+//     return 0;
+// }
+
+// now for string
+
 #include <bits/stdc++.h>
 using namespace std;
 
-bool IsPalindrome(const vector<int> &arr, int start, int end)
+bool IsPalindrome(string s, int start, int end)
 {
     if (start >= end)
     {
         return true;
     }
 
-    if (arr[start] != arr[end])
+    if (s[start] != s[end])
     {
         return false;
     }
 
-    IsPalindrome(arr, start + 1, end - 1);
+   return IsPalindrome(s, start + 1, end - 1);
 }
 
 int main()
 {
-    vector<int> array = {1, 2, 2, 1};
-    bool result = IsPalindrome(array, 0, array.size() - 1);
+    string str = "google";
+    bool result = IsPalindrome(str, 0, str.size() - 1);
     cout << result << endl;
     return 0;
 }
-
