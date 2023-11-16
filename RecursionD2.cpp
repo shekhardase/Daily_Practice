@@ -197,28 +197,28 @@
 
 // now for string
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-bool IsPalindrome(string s, int start, int end)
-{
-    if (start >= end)
-    {
-        return true;
-    }
+// bool IsPalindrome(string s, int start, int end)
+// {
+//     if (start >= end)
+//     {
+//         return true;
+//     }
 
-    if (s[start] != s[end])
-    {
-        return false;
-    }
+//     if (s[start] != s[end])
+//     {
+//         return false;
+//     }
 
-   return IsPalindrome(s, start + 1, end - 1);
-}
+//    return IsPalindrome(s, start + 1, end - 1);
+// }
 
-int main()
-{
-    string str = "google";
-    bool result = IsPalindrome(str, 0, str.size() - 1);
-    cout << result << endl;
-    return 0;
-}
+// int main()
+// {
+//     string str = "google";
+//     bool result = IsPalindrome(str, 0, str.size() - 1);
+//     cout << result << endl;
+//     return 0;
+// }
