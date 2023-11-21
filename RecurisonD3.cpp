@@ -274,6 +274,44 @@
 //     }
 // }
 
+// void sort(int arr[], int n, int size)
+// {
+//     if (size < n)
+//     {
+//         return;
+//     }
+//     int minIndex = n;
+
+//     for (int i = n + 1; i < n; i++)
+//     {
+//         if (arr[i] < arr[minIndex])
+//         {
+//             minIndex = i;
+//         }
+//         swap(arr[n], arr[minIndex]);
+//     }
+
+//     sort(arr, n + 1, size);
+// }
+
+// void selectionSort(int arr[], int startIndex, int n)
+// {
+//     if (startIndex >= n - 1)
+//     {
+//         return;
+//     }
+//     int minIndex = startIndex;
+//     for (int i = startIndex; i < n; i++)
+//     {
+//         if (arr[i] < arr[minIndex])
+//         {
+//             minIndex = i;
+//         }
+//     }
+//     swap(arr[minIndex], arr[startIndex]);
+//     selectionSort(arr, startIndex + 1, n);
+// }
+
 // void printArray(int arr[], int size)
 // {
 //     for (int i = 0; i < size; i++)
@@ -291,7 +329,7 @@
 //     cout << "Original array: ";
 //     printArray(arr, n);
 
-//     selectionSort(arr, n);
+//     selectionSort(arr, 0, n);
 
 //     cout << "Sorted array: ";
 //     printArray(arr, n);
@@ -300,55 +338,85 @@
 // }
 
 // selection sort using recursion
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void selectionSortRecursive(int arr[], int n, int currentIndex = 0)
-{
-    if (currentIndex == n - 1)
-    {
-        // Base case: If currentIndex reaches the last element, the array is sorted.
-        return;
-    }
+// void selectionSortRecursive(int arr[], int n, int currentIndex = 0)
+// {
+//     if (currentIndex == n - 1)
+//     {
+//         // Base case: If currentIndex reaches the last element, the array is sorted.
+//         return;
+//     }
 
-    // Find the index of the minimum element in the unsorted part
-    int minIndex = currentIndex;
-    for (int i = currentIndex + 1; i < n; i++)
-    {
-        if (arr[i] < arr[minIndex])
-        {
-            minIndex = i;
-        }
-    }
+//     // Find the index of the minimum element in the unsorted part
+//     int minIndex = currentIndex;
+//     for (int i = currentIndex + 1; i < n; i++)
+//     {
+//         if (arr[i] < arr[minIndex])
+//         {
+//             minIndex = i;
+//         }
+//     }
 
-    // Swap the found minimum element with the first unsorted element
-    swap(arr[currentIndex], arr[minIndex]);
+//     // Swap the found minimum element with the first unsorted element
+//     swap(arr[currentIndex], arr[minIndex]);
 
-    // Recursively sort the rest of the array
-    selectionSortRecursive(arr, n, currentIndex + 1);
-}
+//     // Recursively sort the rest of the array
+//     selectionSortRecursive(arr, n, currentIndex + 1);
+// }
 
-void printArray(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
+// void printArray(int arr[], int size)
+// {
+//     for (int i = 0; i < size; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+// }
 
-int main()
-{
-    int arr[] = {64, 25, 12, 22, 11};
-    int n = sizeof(arr) / sizeof(arr[0]);
+// int main()
+// {
+//     int arr[] = {64, 25, 12, 22, 11};
+//     int n = sizeof(arr) / sizeof(arr[0]);
 
-    cout << "Original array: ";
-    printArray(arr, n);
+//     cout << "Original array: ";
+//     printArray(arr, n);
 
-    selectionSortRecursive(arr, n);
+//     selectionSortRecursive(arr, n);
 
-    cout << "Sorted array: ";
-    printArray(arr, n);
+//     cout << "Sorted array: ";
+//     printArray(arr, n);
 
-    return 0;
-}
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     for (int i = 0; i < n - 1; i++)
+//     {
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             if (arr[j] < arr[i])
+//             {
+//                 swap(arr[j], arr[i]);
+//             }
+//         }
+//     }
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+// }
