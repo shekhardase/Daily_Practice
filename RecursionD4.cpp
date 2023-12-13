@@ -69,41 +69,77 @@ using namespace std;
 
 // linear search using recursion
 
-bool LinearSearch(int arr[], int size, int k)
-{
+// bool LinearSearch(int arr[], int size, int k)
+// {
 
-    // base case
+//     // base case
+//     if (size == 0)
+//     {
+//         return false;
+//     }
+//     if (arr[0] == k)
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         bool remainingPart = LinearSearch(arr + 1, size - 1, k);
+//         return remainingPart;
+//     }
+// }
+
+// int main()
+// {
+//     int arr[5] = {1, 2, 3, 4, 5};
+//     int size = 5;
+//     int key = 2;
+
+//     bool ans = LinearSearch(arr, size, key);
+
+//     if (ans)
+//     {
+//         cout << "present " << endl;
+//     }
+//     else
+//     {
+//         cout << "Not found" << endl;
+//     }
+
+//     return 0;
+// }
+
+// without bool
+
+int linear(int *arr, int size, int index, int key)
+{
     if (size == 0)
     {
-        return false;
+        return -1;
     }
-    if (arr[0] == k)
+    if (arr[index] == key)
     {
-        return true;
+        return index;
     }
-    else
-    {
-        bool remainingPart = LinearSearch(arr + 1, size - 1, k);
-        return remainingPart;
-    }
+
+    return linear(arr, size, index + 1, key);
 }
 
 int main()
 {
-    int arr[5] = {1, 2, 3, 4, 5};
-    int size = 5;
-    int key = 2;
+    int arr[] = {4, 14, 14, 14, 42};
 
-    bool ans = LinearSearch(arr, size, key);
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int key = 42;
 
-    if (ans)
+    int result = linear(arr, size, 0, key);
+
+    if (result != -1)
     {
-        cout << "present " << endl;
+        cout << "Element found " << result;
     }
     else
     {
         cout << "Not found" << endl;
     }
-
-    return 0;
+    return 0 ;
 }
