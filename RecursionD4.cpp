@@ -110,36 +110,96 @@ using namespace std;
 
 // without bool
 
-int linear(int *arr, int size, int index, int key)
+// void print(int arr[], int n)
+// {
+//     cout << "Size of array is = " << n << endl;
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+// }
+
+// int linear(int *arr, int size, int index, int key)
+// {
+
+//     print(arr, size);
+//     if (size == 0)
+//     {
+//         return -1;
+//     }
+//     if (arr[index] == key)
+//     {
+//         return index;
+//     }
+
+//     return linear(arr, size, index + 1, key);
+// }
+
+// int main()
+// {
+//     int arr[] = {1, 2, 4, 5, 6, 7, 8};
+
+//     int size = sizeof(arr) / sizeof(arr[0]);
+//     int key = 8;
+
+//     int result = linear(arr, size, 0, key);
+
+//     if (result != -1)
+//     {
+//         cout << "Element found " << result;
+//     }
+//     else
+//     {
+//         cout << "Not found" << endl;
+//     }
+//     return 0;
+// }
+#include <iostream>
+
+using namespace std;
+
+bool BinarySearch(int *arr, int s, int e, int k)
 {
-    if (size == 0)
+    // base case
+    if (s > e)
     {
-        return -1;
-    }
-    if (arr[index] == key)
-    {
-        return index;
+        return false; // element not found
     }
 
-    return linear(arr, size, index + 1, key);
+    int mid = s + (e - s) / 2;
+
+    cout << "Value of mid is " << arr[mid] << endl;
+
+    // element found
+    if (arr[mid] == k)
+    {
+        return true;
+    }
+
+    if (arr[mid] < k)
+    {
+        return BinarySearch(arr, mid + 1, e, k);
+    }
+    else
+    {
+        return BinarySearch(arr, s, mid - 1, k);
+    }
 }
 
 int main()
 {
-    int arr[] = {4, 14, 14, 14, 42};
+    const int size = 6; // Fixed size of the array
 
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int key = 42;
+    int arr[size] = {2, 3, 4, 5, 6, 7};
 
-    int result = linear(arr, size, 0, key);
+    int key;
 
-    if (result != -1)
-    {
-        cout << "Element found " << result;
-    }
-    else
-    {
-        cout << "Not found" << endl;
-    }
-    return 0 ;
+    cout << "Enter the element to search: ";
+    cin >> key;
+
+    cout << "Present or not: " << BinarySearch(arr, 0, size - 1, key) << endl;
+
+    return 0;
 }
