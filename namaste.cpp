@@ -117,37 +117,78 @@
 //     }
 // }
 
-#include <iostream>
-#include <map>
-using namespace std;
+// #include <iostream>
+// #include <map>
+// using namespace std;
 
+// int main()
+// {
+//     map<int, int> MyMap;
+
+//     MyMap[1] = 12 ;
+//     MyMap[2] = 21;
+//     MyMap[3] = 13;
+//     MyMap[7] = 322;
+//     MyMap[4] = 32322;
+//     MyMap[5] = 1232;
+//     MyMap[6] = 12342;
+
+//     map<int , int>:: iterator iterate;
+//     for(iterate = MyMap.begin() ; iterate!= MyMap.end() ;iterate++)
+//     {
+//         // cout<<endl;
+//         cout<<(*iterate).first <<" " <<(*iterate).second<<endl;
+
+//     }
+
+//    MyMap.insert(make_pair(323 , 23));
+//    cout<<endl;
+
+//   for(iterate = MyMap.begin() ; iterate!= MyMap.end() ;iterate++)
+//     {
+//         // cout<<endl;
+//         cout<<(*iterate).first <<" " <<(*iterate).second<<endl;
+
+//     }
+// }
+
+/*------18/01/2023------*/
+#include <bits/stdc++.h> //jai ganesh
+using namespace std;
 int main()
 {
-    map<int, int> MyMap;
-
-    MyMap[1] = 12 ;
-    MyMap[2] = 21;
-    MyMap[3] = 13;
-    MyMap[7] = 322;
-    MyMap[4] = 32322;
-    MyMap[5] = 1232;
-    MyMap[6] = 12342;
-
-    map<int , int>:: iterator iterate;
-    for(iterate = MyMap.begin() ; iterate!= MyMap.end() ;iterate++)
+    int t;
+    cin >> t;
+    while (t > 0)
     {
-        // cout<<endl;
-        cout<<(*iterate).first <<" " <<(*iterate).second<<endl;
-        
+        int n;
+        cin >> n;
+        int arr[n];
+        int count = 0;
+        int flag = 0;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+
+            if (arr[i] == 0)
+            {
+                flag = 1;
+            }
+
+            if (arr[i] < 0)
+            {
+                count++;
+            }
+        }
+
+        if (count % 2 == 0 || flag != 0)
+            cout << "0" << endl;
+
+        else
+            cout << (count % 2) << endl;
+
+        t--;
     }
 
-   MyMap.insert(make_pair(323 , 23));
-   cout<<endl;
-
-  for(iterate = MyMap.begin() ; iterate!= MyMap.end() ;iterate++)
-    {
-        // cout<<endl;
-        cout<<(*iterate).first <<" " <<(*iterate).second<<endl;
-        
-    }
-} 
+    return 0;
+}

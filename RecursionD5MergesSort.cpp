@@ -83,7 +83,7 @@
 //     return 0;
 // }
 
-// Merge sort normally
+// merging two sorted arays revision
 
 #include <bits/stdc++.h>
 using namespace std;
