@@ -326,6 +326,13 @@ void insertathead(node *&head, int d)
     head = temp;              // now applying head to temp
 } // now head of linked list is temp
 
+void insertattail(node *&tail, int d)
+{
+    node *temp = new node(d);
+    tail->next = temp;
+    tail = temp;
+}
+
 void print(node *&head)
 {
     node *temp = head; // new node at with head address
@@ -341,16 +348,19 @@ void print(node *&head)
 int main()
 {
     node *n1 = new node(100);
-    cout << n1 << endl;       // address of n1
-    cout << n1->next << endl; // pointing to this address
-    cout << n1->data << endl; // data containing in n1
+    // cout << n1 << endl;       // address of n1
+    // cout << n1->next << endl; // pointing to this address
+    // cout << n1->data << endl; // data containing in n1
 
     node *head = n1; // head pointer pointing to n1
+    node *tail = n1;
 
-    cout << head << endl; // address of n1 aka head pointer;
+    // cout << head << endl; // address of n1 aka head pointer;
 
     print(head);
 
     insertathead(head, 12);
+    insertattail(tail, 13);
+    insertathead(head, 13);
     print(head);
 }
