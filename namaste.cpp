@@ -672,8 +672,6 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 
 // int main() {
@@ -694,4 +692,53 @@
 //     return 0;
 // }
 
+// make vector
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <map>
+using namespace std;
+
+int main()
+{
+    vector<int> temp;
+
+    temp = {1, 2, 3, 2};
+
+    map<int, int> mp;
+    for (auto i : temp)
+    {
+        mp[i]++;
+    }
+
+    for (auto i : mp)
+    {
+        cout << i.first << " " << i.second << endl;
+    }
+
+    vector<int> temp2;
+
+    for (auto i : mp)
+    {
+        if (i.second == 1)
+        {
+            temp2.push_back(i.first);
+        }
+    }
+
+    for (int i = 0; i < temp2.size(); i++)
+    {
+        cout << temp2[i] << " ";
+    }
+    cout << endl;
+    cout << "__________________________________";
+    cout << endl;
+    int sum = 0;
+    for (int i = 0; i < temp2.size(); i++)
+    {
+        sum = sum + temp2[i];
+    }
+
+    cout << sum << endl;
+}
