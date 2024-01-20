@@ -317,7 +317,6 @@ public:
     }
 };
 
-
 void insertathead(node *&head, int d)
 {
     // new node create
@@ -325,7 +324,7 @@ void insertathead(node *&head, int d)
     node *temp = new node(d); // new node temp created with data d
     temp->next = head;        // temp is now pointing to previous node n1
     head = temp;              // now applying head to temp
-}                             // now temp is head of linked list
+} // now temp is head of linked list
 
 void insertattail(node *&tail, int d)
 {
@@ -345,12 +344,6 @@ void print(node *&head)
     }
     cout << endl;
 }
-
-
-
-
-
-
 
 int main()
 {
