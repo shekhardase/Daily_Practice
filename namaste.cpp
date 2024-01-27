@@ -1,241 +1,427 @@
-// // // // // // // // // // // #include<iostream>
+// // // // // // // // // // // // // #include<iostream>
+// // // // // // // // // // // // // using namespace std;
+// // // // // // // // // // // // // int main()
+// // // // // // // // // // // // // {
+// // // // // // // // // // // // //     cout<<"Namaste World";
+// // // // // // // // // // // // //     return 0;
+// // // // // // // // // // // // // }
+
+// // // // // // // // // // // // #include <iostream>
+// // // // // // // // // // // // using namespace std;
+// // // // // // // // // // // // // int main()
+// // // // // // // // // // // // // {
+// // // // // // // // // // // // //     char a;
+// // // // // // // // // // // // //     cin >> a ;
+
+// // // // // // // // // // // // //     if (  a >=  'a' &&  a <= 'z')
+// // // // // // // // // // // // //     {
+// // // // // // // // // // // // //         cout << "It is lower case "<<endl;
+// // // // // // // // // // // // //     }
+
+// // // // // // // // // // // // //     else if (a >=  'A' &&  a <= 'Z')
+// // // // // // // // // // // // //     {
+// // // // // // // // // // // // //         cout << "It is Upper case " << endl;
+// // // // // // // // // // // // //     }
+
+// // // // // // // // // // // // //     else if (a>=  '0' &&  a <= '9')
+// // // // // // // // // // // // //     {
+// // // // // // // // // // // // //         cout<<"it is numeric "<<endl;
+// // // // // // // // // // // // //     }
+
+// // // // // // // // // // // // // }
+
+// // // // // // // // // // // // // int main ()
+// // // // // // // // // // // // // {
+// // // // // // // // // // // // //     int n;
+// // // // // // // // // // // // //      cin >> n;
+// // // // // // // // // // // // //      int i = 1;
+
+// // // // // // // // // // // // //      while(i <=n)
+// // // // // // // // // // // // //      {
+
+// // // // // // // // // // // // //         cout<<i<<" "; i = i+1;
+// // // // // // // // // // // // //      }
+// // // // // // // // // // // // // }
+
+// // // // // // // // // // // // // int main()
+// // // // // // // // // // // // // {
+// // // // // // // // // // // // //     int n;
+// // // // // // // // // // // // //     cin >>n;
+
+// // // // // // // // // // // // //     int sum = 0;
+// // // // // // // // // // // // //     int i = 1;
+
+// // // // // // // // // // // // //     while(i<=n)
+// // // // // // // // // // // // //     {
+// // // // // // // // // // // // //         // cout<<sum<<endl;
+// // // // // // // // // // // // //         sum= sum+i;
+// // // // // // // // // // // // //         i = i+2;
+
+// // // // // // // // // // // // //     }
+// // // // // // // // // // // // //     cout<<sum<<endl;
+
+// // // // // // // // // // // // //check number is prime or not
+
+// // // // // // // // // // // // int main()
+// // // // // // // // // // // // {
+// // // // // // // // // // // //     int n;
+// // // // // // // // // // // //     cin >> n;
+
+// // // // // // // // // // // //     int i = 2;
+// // // // // // // // // // // //     while(i<n)
+// // // // // // // // // // // //     {
+// // // // // // // // // // // //         if(n%i==0)
+// // // // // // // // // // // //         {
+// // // // // // // // // // // //             cout<<"Not Prime"<<endl;
+// // // // // // // // // // // //             break;
+// // // // // // // // // // // //         // }
+// // // // // // // // // // // //         i = i+1;
+// // // // // // // // // // // //     }
+// // // // // // // // // // // //     if(i==n)
+// // // // // // // // // // // //     {
+// // // // // // // // // // // //         cout<<"Prime"<<endl;
+// // // // // // // // // // // //     }
+// // // // // // // // // // // // }
+
+// // // // // // // // // // // #include <map>
+// // // // // // // // // // // #include <iostream>
 // // // // // // // // // // // using namespace std;
+
 // // // // // // // // // // // int main()
 // // // // // // // // // // // {
-// // // // // // // // // // //     cout<<"Namaste World";
-// // // // // // // // // // //     return 0;
+// // // // // // // // // // //     map<int, int> Hagu;
+
+// // // // // // // // // // //     Hagu[1] = 12;
+// // // // // // // // // // //     Hagu[2] = 14;
+// // // // // // // // // // //     Hagu[3] = 14;
+// // // // // // // // // // //     Hagu[4] = 15;
+// // // // // // // // // // //     Hagu[5] = 16;
+
+// // // // // // // // // // //     map<int, int>::iterator Lendi;
+// // // // // // // // // // //     for (Lendi = Hagu.begin(); Lendi != Hagu.end(); Lendi++)
+// // // // // // // // // // //     {
+// // // // // // // // // // //         cout << (*Lendi).first << " " << (*Lendi).second << endl;
+// // // // // // // // // // //     }
+
+// // // // // // // // // // //     // Hagu.insert({{[6] = 23}, {[7] = 123}});
+// // // // // // // // // // //     Hagu[23] = 23234;
+
+// // // // // // // // // // //     cout << endl
+// // // // // // // // // // //          << endl;
+
+// // // // // // // // // // //     map<int, int>::iterator BhagBc;
+
+// // // // // // // // // // //     for (BhagBc = Hagu.begin(); BhagBc != Hagu.end(); BhagBc++)
+// // // // // // // // // // //     {
+// // // // // // // // // // //         cout << (*BhagBc).first << " " << (*BhagBc).second << endl;
+// // // // // // // // // // //     }
 // // // // // // // // // // // }
 
-// // // // // // // // // // #include <iostream>
+// // // // // // // // // // // #include <iostream>
+// // // // // // // // // // // #include <map>
+// // // // // // // // // // // using namespace std;
+
+// // // // // // // // // // // int main()
+// // // // // // // // // // // {
+// // // // // // // // // // //     map<int, int> MyMap;
+
+// // // // // // // // // // //     MyMap[1] = 12 ;
+// // // // // // // // // // //     MyMap[2] = 21;
+// // // // // // // // // // //     MyMap[3] = 13;
+// // // // // // // // // // //     MyMap[7] = 322;
+// // // // // // // // // // //     MyMap[4] = 32322;
+// // // // // // // // // // //     MyMap[5] = 1232;
+// // // // // // // // // // //     MyMap[6] = 12342;
+
+// // // // // // // // // // //     map<int , int>:: iterator iterate;
+// // // // // // // // // // //     for(iterate = MyMap.begin() ; iterate!= MyMap.end() ;iterate++)
+// // // // // // // // // // //     {
+// // // // // // // // // // //         // cout<<endl;
+// // // // // // // // // // //         cout<<(*iterate).first <<" " <<(*iterate).second<<endl;
+
+// // // // // // // // // // //     }
+
+// // // // // // // // // // //    MyMap.insert(make_pair(323 , 23));
+// // // // // // // // // // //    cout<<endl;
+
+// // // // // // // // // // //   for(iterate = MyMap.begin() ; iterate!= MyMap.end() ;iterate++)
+// // // // // // // // // // //     {
+// // // // // // // // // // //         // cout<<endl;
+// // // // // // // // // // //         cout<<(*iterate).first <<" " <<(*iterate).second<<endl;
+
+// // // // // // // // // // //     }
+// // // // // // // // // // // }
+
+// // // // // // // // // // /*------18/01/2023------*/
+// // // // // // // // // // #include <bits/stdc++.h> //jai ganesh
 // // // // // // // // // // using namespace std;
-// // // // // // // // // // // int main()
-// // // // // // // // // // // {
-// // // // // // // // // // //     char a;
-// // // // // // // // // // //     cin >> a ;
-
-// // // // // // // // // // //     if (  a >=  'a' &&  a <= 'z')
-// // // // // // // // // // //     {
-// // // // // // // // // // //         cout << "It is lower case "<<endl;
-// // // // // // // // // // //     }
-
-// // // // // // // // // // //     else if (a >=  'A' &&  a <= 'Z')
-// // // // // // // // // // //     {
-// // // // // // // // // // //         cout << "It is Upper case " << endl;
-// // // // // // // // // // //     }
-
-// // // // // // // // // // //     else if (a>=  '0' &&  a <= '9')
-// // // // // // // // // // //     {
-// // // // // // // // // // //         cout<<"it is numeric "<<endl;
-// // // // // // // // // // //     }
-
-// // // // // // // // // // // }
-
-// // // // // // // // // // // int main ()
-// // // // // // // // // // // {
-// // // // // // // // // // //     int n;
-// // // // // // // // // // //      cin >> n;
-// // // // // // // // // // //      int i = 1;
-
-// // // // // // // // // // //      while(i <=n)
-// // // // // // // // // // //      {
-
-// // // // // // // // // // //         cout<<i<<" "; i = i+1;
-// // // // // // // // // // //      }
-// // // // // // // // // // // }
-
-// // // // // // // // // // // int main()
-// // // // // // // // // // // {
-// // // // // // // // // // //     int n;
-// // // // // // // // // // //     cin >>n;
-
-// // // // // // // // // // //     int sum = 0;
-// // // // // // // // // // //     int i = 1;
-
-// // // // // // // // // // //     while(i<=n)
-// // // // // // // // // // //     {
-// // // // // // // // // // //         // cout<<sum<<endl;
-// // // // // // // // // // //         sum= sum+i;
-// // // // // // // // // // //         i = i+2;
-
-// // // // // // // // // // //     }
-// // // // // // // // // // //     cout<<sum<<endl;
-
-// // // // // // // // // // //check number is prime or not
-
 // // // // // // // // // // int main()
 // // // // // // // // // // {
-// // // // // // // // // //     int n;
-// // // // // // // // // //     cin >> n;
-
-// // // // // // // // // //     int i = 2;
-// // // // // // // // // //     while(i<n)
+// // // // // // // // // //     int t;
+// // // // // // // // // //     cin >> t;
+// // // // // // // // // //     while (t > 0)
 // // // // // // // // // //     {
-// // // // // // // // // //         if(n%i==0)
+// // // // // // // // // //         int n;
+// // // // // // // // // //         cin >> n;
+// // // // // // // // // //         int arr[n];
+// // // // // // // // // //         int count = 0;
+// // // // // // // // // //         int flag = 0;
+// // // // // // // // // //         for (int i = 0; i < n; i++)
 // // // // // // // // // //         {
-// // // // // // // // // //             cout<<"Not Prime"<<endl;
-// // // // // // // // // //             break;
-// // // // // // // // // //         // }
-// // // // // // // // // //         i = i+1;
+// // // // // // // // // //             cin >> arr[i];
+
+// // // // // // // // // //             if (arr[i] == 0)
+// // // // // // // // // //             {
+// // // // // // // // // //                 flag = 1;
+// // // // // // // // // //             }
+
+// // // // // // // // // //             if (arr[i] < 0)
+// // // // // // // // // //             {
+// // // // // // // // // //                 count++;
+// // // // // // // // // //             }
+// // // // // // // // // //         }
+
+// // // // // // // // // //         if (count % 2 == 0 || flag != 0)
+// // // // // // // // // //             cout << "0" << endl;
+
+// // // // // // // // // //         else
+// // // // // // // // // //             cout << (count % 2) << endl;
+
+// // // // // // // // // //         t--;
 // // // // // // // // // //     }
-// // // // // // // // // //     if(i==n)
-// // // // // // // // // //     {
-// // // // // // // // // //         cout<<"Prime"<<endl;
-// // // // // // // // // //     }
+
+// // // // // // // // // //     return 0;
 // // // // // // // // // // }
 
-// // // // // // // // // #include <map>
 // // // // // // // // // #include <iostream>
 // // // // // // // // // using namespace std;
 
 // // // // // // // // // int main()
 // // // // // // // // // {
-// // // // // // // // //     map<int, int> Hagu;
-
-// // // // // // // // //     Hagu[1] = 12;
-// // // // // // // // //     Hagu[2] = 14;
-// // // // // // // // //     Hagu[3] = 14;
-// // // // // // // // //     Hagu[4] = 15;
-// // // // // // // // //     Hagu[5] = 16;
-
-// // // // // // // // //     map<int, int>::iterator Lendi;
-// // // // // // // // //     for (Lendi = Hagu.begin(); Lendi != Hagu.end(); Lendi++)
+// // // // // // // // //     int n;
+// // // // // // // // //     cin >> n;
+// // // // // // // // //     int arr[n];
+// // // // // // // // //     int store = 0;
+// // // // // // // // //     // int end = n;
+// // // // // // // // //     int k;
+// // // // // // // // //     cout << "enter k";
+// // // // // // // // //     cin >> k;
+// // // // // // // // //     for (int i = 0; i < n; i++)
 // // // // // // // // //     {
-// // // // // // // // //         cout << (*Lendi).first << " " << (*Lendi).second << endl;
+// // // // // // // // //         cin >> arr[i];
 // // // // // // // // //     }
 
-// // // // // // // // //     // Hagu.insert({{[6] = 23}, {[7] = 123}});
-// // // // // // // // //     Hagu[23] = 23234;
-
-// // // // // // // // //     cout << endl
-// // // // // // // // //          << endl;
-
-// // // // // // // // //     map<int, int>::iterator BhagBc;
-
-// // // // // // // // //     for (BhagBc = Hagu.begin(); BhagBc != Hagu.end(); BhagBc++)
+// // // // // // // // //     for (int i = 0; i < n; i++)
 // // // // // // // // //     {
-// // // // // // // // //         cout << (*BhagBc).first << " " << (*BhagBc).second << endl;
+// // // // // // // // //         store = arr[0];
+
+// // // // // // // // //         if (store < arr[i])
+// // // // // // // // //         {
+// // // // // // // // //             store = arr[i];
+// // // // // // // // //         }
 // // // // // // // // //     }
+
+// // // // // // // // //     cout << store << endl;
+
+// // // // // // // // //     // end = arr[k];
+
+// // // // // // // // //     for (int i = store; i > k; i--)
+// // // // // // // // //     {
+// // // // // // // // //         store = arr[i];
+// // // // // // // // //     }
+
+// // // // // // // // //     cout << store << endl;
 // // // // // // // // // }
 
+// // // // // // // // // #include <algorithm>
 // // // // // // // // // #include <iostream>
-// // // // // // // // // #include <map>
+// // // // // // // // // #include <bits/stdc++.h>
 // // // // // // // // // using namespace std;
 
 // // // // // // // // // int main()
 // // // // // // // // // {
-// // // // // // // // //     map<int, int> MyMap;
-
-// // // // // // // // //     MyMap[1] = 12 ;
-// // // // // // // // //     MyMap[2] = 21;
-// // // // // // // // //     MyMap[3] = 13;
-// // // // // // // // //     MyMap[7] = 322;
-// // // // // // // // //     MyMap[4] = 32322;
-// // // // // // // // //     MyMap[5] = 1232;
-// // // // // // // // //     MyMap[6] = 12342;
-
-// // // // // // // // //     map<int , int>:: iterator iterate;
-// // // // // // // // //     for(iterate = MyMap.begin() ; iterate!= MyMap.end() ;iterate++)
+// // // // // // // // //     int n;
+// // // // // // // // //     cin >> n;
+// // // // // // // // //     vector<int> arr(n);
+// // // // // // // // //     for (int i = 0; i < n; i++)
 // // // // // // // // //     {
-// // // // // // // // //         // cout<<endl;
-// // // // // // // // //         cout<<(*iterate).first <<" " <<(*iterate).second<<endl;
-
+// // // // // // // // //         cin >> arr[i];
 // // // // // // // // //     }
 
-// // // // // // // // //    MyMap.insert(make_pair(323 , 23));
-// // // // // // // // //    cout<<endl;
+// // // // // // // // //     int min = *min_element(arr.begin(), arr.end());
 
-// // // // // // // // //   for(iterate = MyMap.begin() ; iterate!= MyMap.end() ;iterate++)
+// // // // // // // // //     int max = *max_element(arr.begin(), arr.end());
+
+// // // // // // // // //     // for(auto i : )
+
+// // // // // // // // //     // cout << min << " " << max << endl;
+// // // // // // // // //     // for (auto element : arr)
+// // // // // // // // //     // {
+// // // // // // // // //     //     cout << element << " ";
+// // // // // // // // //     // }
+// // // // // // // // //     // cout << endl;
+
+// // // // // // // // //     // int IndexMaxStart = 0;
+// // // // // // // // //     int IndexMaxStart = -1;
+// // // // // // // // //     int IndexMaxEnd = -1;
+
+// // // // // // // // //     int IndexMinStart = -1;
+// // // // // // // // //     int IndexMinEnd = -1;
+
+// // // // // // // // //     int delMin = 0;
+// // // // // // // // //     int delMax = 0;
+// // // // // // // // //     for (int i = 0; i < n; i++)
 // // // // // // // // //     {
-// // // // // // // // //         // cout<<endl;
-// // // // // // // // //         cout<<(*iterate).first <<" " <<(*iterate).second<<endl;
-
+// // // // // // // // //         if (arr[i] == max)
+// // // // // // // // //         {
+// // // // // // // // //             IndexMaxStart = std::abs(i - 0);
+// // // // // // // // //             break;
+// // // // // // // // //         }
 // // // // // // // // //     }
+// // // // // // // // //     // cout << IndexMaxStart << " ";
+
+// // // // // // // // //     for (int i = n - 1; i >= 0; i--)
+// // // // // // // // //     {
+// // // // // // // // //         if (arr[i] == max)
+// // // // // // // // //         {
+
+// // // // // // // // //             IndexMaxEnd = std::abs(i - (n - 1));
+// // // // // // // // //             break;
+// // // // // // // // //         }
+// // // // // // // // //     }
+
+// // // // // // // // //     for (int i = 0; i < n; i++)
+// // // // // // // // //     {
+// // // // // // // // //         if (arr[i] == min)
+// // // // // // // // //         {
+// // // // // // // // //             IndexMinStart = std::abs(i - (n - 1));
+// // // // // // // // //             break;
+// // // // // // // // //         }
+// // // // // // // // //     }
+
+// // // // // // // // //     // cout << IndexMinStart << " ";
+
+// // // // // // // // //     for (int i = n - 1; i >= 0; i--)
+// // // // // // // // //     {
+// // // // // // // // //         if (arr[i] == min)
+// // // // // // // // //         {
+// // // // // // // // //             IndexMinEnd++;
+// // // // // // // // //         }
+// // // // // // // // //     }
+
+// // // // // // // // //     if (IndexMaxEnd == 0)
+// // // // // // // // //     {
+// // // // // // // // //         IndexMaxEnd = 1;
+// // // // // // // // //     }
+// // // // // // // // //     if (IndexMinEnd == 0)
+// // // // // // // // //     {
+// // // // // // // // //         IndexMinEnd = 1;
+// // // // // // // // //     }
+// // // // // // // // //     if (IndexMinStart == 0)
+// // // // // // // // //     {
+// // // // // // // // //         IndexMinStart = 1;
+// // // // // // // // //     }
+// // // // // // // // //     if (IndexMaxStart == 0)
+// // // // // // // // //     {
+// // // // // // // // //         IndexMaxStart = 1;
+// // // // // // // // //     }
+
+// // // // // // // // //     if (IndexMaxEnd > IndexMaxStart)
+// // // // // // // // //     {
+// // // // // // // // //         delMax = IndexMaxStart;
+// // // // // // // // //     }
+
+// // // // // // // // //     if (IndexMaxEnd < IndexMaxStart)
+// // // // // // // // //     {
+// // // // // // // // //         delMax = IndexMaxEnd;
+// // // // // // // // //     }
+
+// // // // // // // // //     if (IndexMinEnd > IndexMaxStart)
+// // // // // // // // //     {
+// // // // // // // // //         delMin = IndexMinStart;
+// // // // // // // // //     }
+
+// // // // // // // // //     if (IndexMinEnd < IndexMinStart)
+// // // // // // // // //     {
+// // // // // // // // //         delMin = IndexMinEnd;
+// // // // // // // // //     }
+
+// // // // // // // // //     cout << delMin + delMax;
 // // // // // // // // // }
 
-// // // // // // // // /*------18/01/2023------*/
-// // // // // // // // #include <bits/stdc++.h> //jai ganesh
+// // // // // // // // #include <algorithm>
+// // // // // // // // #include <iostream>
+// // // // // // // // #include <vector>
+
 // // // // // // // // using namespace std;
+
 // // // // // // // // int main()
 // // // // // // // // {
-// // // // // // // //     int t;
-// // // // // // // //     cin >> t;
-// // // // // // // //     while (t > 0)
+// // // // // // // //     int n;
+// // // // // // // //     cin >> n;
+// // // // // // // //     vector<int> arr(n);
+
+// // // // // // // //     for (int i = 0; i < n; i++)
 // // // // // // // //     {
-// // // // // // // //         int n;
-// // // // // // // //         cin >> n;
-// // // // // // // //         int arr[n];
-// // // // // // // //         int count = 0;
-// // // // // // // //         int flag = 0;
-// // // // // // // //         for (int i = 0; i < n; i++)
-// // // // // // // //         {
-// // // // // // // //             cin >> arr[i];
-
-// // // // // // // //             if (arr[i] == 0)
-// // // // // // // //             {
-// // // // // // // //                 flag = 1;
-// // // // // // // //             }
-
-// // // // // // // //             if (arr[i] < 0)
-// // // // // // // //             {
-// // // // // // // //                 count++;
-// // // // // // // //             }
-// // // // // // // //         }
-
-// // // // // // // //         if (count % 2 == 0 || flag != 0)
-// // // // // // // //             cout << "0" << endl;
-
-// // // // // // // //         else
-// // // // // // // //             cout << (count % 2) << endl;
-
-// // // // // // // //         t--;
+// // // // // // // //         cin >> arr[i];
 // // // // // // // //     }
+
+// // // // // // // //     int minValue = *min_element(arr.begin(), arr.end());
+// // // // // // // //     int maxValue = *max_element(arr.begin(), arr.end());
+
+// // // // // // // //     int indexMinStart = -1;
+// // // // // // // //     int indexMinEnd = -1;
+// // // // // // // //     int indexMaxStart = -1;
+// // // // // // // //     int indexMaxEnd = -1;
+
+// // // // // // // //     for (int i = 0; i < n; i++)
+// // // // // // // //     {
+// // // // // // // //         if (arr[i] == minValue)
+// // // // // // // //         {
+// // // // // // // //             indexMinStart = i; // Fixed calculation of IndexMinStart
+// // // // // // // //             break;
+// // // // // // // //         }
+// // // // // // // //     }
+
+// // // // // // // //     for (int i = n - 1; i >= 0; i--)
+// // // // // // // //     {
+// // // // // // // //         if (arr[i] == minValue)
+// // // // // // // //         {
+// // // // // // // //             indexMinEnd = i;
+// // // // // // // //             break;
+// // // // // // // //         }
+// // // // // // // //     }
+
+// // // // // // // //     for (int i = 0; i < n; i++)
+// // // // // // // //     {
+// // // // // // // //         if (arr[i] == maxValue)
+// // // // // // // //         {
+// // // // // // // //             indexMaxStart = i;
+// // // // // // // //             break;
+// // // // // // // //         }
+// // // // // // // //     }
+
+// // // // // // // //     for (int i = n - 1; i >= 0; i--)
+// // // // // // // //     {
+// // // // // // // //         if (arr[i] == maxValue)
+// // // // // // // //         {
+// // // // // // // //             indexMaxEnd = i;
+// // // // // // // //             break;
+// // // // // // // //         }
+// // // // // // // //     }
+
+// // // // // // // //     int delMin = max(indexMinStart, n - 1 - indexMinEnd); // Fixed calculation of delMin
+// // // // // // // //     int delMax = max(indexMaxStart, n - 1 - indexMaxEnd); // Fixed calculation of delMax
+
+// // // // // // // //     cout << delMin + delMax << endl;
 
 // // // // // // // //     return 0;
 // // // // // // // // }
 
 // // // // // // // #include <iostream>
-// // // // // // // using namespace std;
-
-// // // // // // // int main()
-// // // // // // // {
-// // // // // // //     int n;
-// // // // // // //     cin >> n;
-// // // // // // //     int arr[n];
-// // // // // // //     int store = 0;
-// // // // // // //     // int end = n;
-// // // // // // //     int k;
-// // // // // // //     cout << "enter k";
-// // // // // // //     cin >> k;
-// // // // // // //     for (int i = 0; i < n; i++)
-// // // // // // //     {
-// // // // // // //         cin >> arr[i];
-// // // // // // //     }
-
-// // // // // // //     for (int i = 0; i < n; i++)
-// // // // // // //     {
-// // // // // // //         store = arr[0];
-
-// // // // // // //         if (store < arr[i])
-// // // // // // //         {
-// // // // // // //             store = arr[i];
-// // // // // // //         }
-// // // // // // //     }
-
-// // // // // // //     cout << store << endl;
-
-// // // // // // //     // end = arr[k];
-
-// // // // // // //     for (int i = store; i > k; i--)
-// // // // // // //     {
-// // // // // // //         store = arr[i];
-// // // // // // //     }
-
-// // // // // // //     cout << store << endl;
-// // // // // // // }
-
+// // // // // // // #include <vector>
 // // // // // // // #include <algorithm>
-// // // // // // // #include <iostream>
-// // // // // // // #include <bits/stdc++.h>
+
 // // // // // // // using namespace std;
 
 // // // // // // // int main()
@@ -243,115 +429,47 @@
 // // // // // // //     int n;
 // // // // // // //     cin >> n;
 // // // // // // //     vector<int> arr(n);
+
 // // // // // // //     for (int i = 0; i < n; i++)
 // // // // // // //     {
 // // // // // // //         cin >> arr[i];
 // // // // // // //     }
 
-// // // // // // //     int min = *min_element(arr.begin(), arr.end());
+// // // // // // //     int minValue = *min_element(arr.begin(), arr.end());
+// // // // // // //     int maxValue = *max_element(arr.begin(), arr.end());
 
-// // // // // // //     int max = *max_element(arr.begin(), arr.end());
-
-// // // // // // //     // for(auto i : )
-
-// // // // // // //     // cout << min << " " << max << endl;
-// // // // // // //     // for (auto element : arr)
-// // // // // // //     // {
-// // // // // // //     //     cout << element << " ";
-// // // // // // //     // }
-// // // // // // //     // cout << endl;
-
-// // // // // // //     // int IndexMaxStart = 0;
-// // // // // // //     int IndexMaxStart = -1;
-// // // // // // //     int IndexMaxEnd = -1;
-
-// // // // // // //     int IndexMinStart = -1;
-// // // // // // //     int IndexMinEnd = -1;
-
-// // // // // // //     int delMin = 0;
-// // // // // // //     int delMax = 0;
-// // // // // // //     for (int i = 0; i < n; i++)
-// // // // // // //     {
-// // // // // // //         if (arr[i] == max)
-// // // // // // //         {
-// // // // // // //             IndexMaxStart = std::abs(i - 0);
-// // // // // // //             break;
-// // // // // // //         }
-// // // // // // //     }
-// // // // // // //     // cout << IndexMaxStart << " ";
-
-// // // // // // //     for (int i = n - 1; i >= 0; i--)
-// // // // // // //     {
-// // // // // // //         if (arr[i] == max)
-// // // // // // //         {
-
-// // // // // // //             IndexMaxEnd = std::abs(i - (n - 1));
-// // // // // // //             break;
-// // // // // // //         }
-// // // // // // //     }
+// // // // // // //     int indexMin = -1;
+// // // // // // //     int indexMax = -1;
 
 // // // // // // //     for (int i = 0; i < n; i++)
 // // // // // // //     {
-// // // // // // //         if (arr[i] == min)
+// // // // // // //         if (arr[i] == minValue)
 // // // // // // //         {
-// // // // // // //             IndexMinStart = std::abs(i - (n - 1));
+// // // // // // //             indexMin = i;
 // // // // // // //             break;
 // // // // // // //         }
 // // // // // // //     }
 
-// // // // // // //     // cout << IndexMinStart << " ";
-
 // // // // // // //     for (int i = n - 1; i >= 0; i--)
 // // // // // // //     {
-// // // // // // //         if (arr[i] == min)
+// // // // // // //         if (arr[i] == maxValue)
 // // // // // // //         {
-// // // // // // //             IndexMinEnd++;
+// // // // // // //             indexMax = i;
+// // // // // // //             break;
 // // // // // // //         }
 // // // // // // //     }
 
-// // // // // // //     if (IndexMaxEnd == 0)
-// // // // // // //     {
-// // // // // // //         IndexMaxEnd = 1;
-// // // // // // //     }
-// // // // // // //     if (IndexMinEnd == 0)
-// // // // // // //     {
-// // // // // // //         IndexMinEnd = 1;
-// // // // // // //     }
-// // // // // // //     if (IndexMinStart == 0)
-// // // // // // //     {
-// // // // // // //         IndexMinStart = 1;
-// // // // // // //     }
-// // // // // // //     if (IndexMaxStart == 0)
-// // // // // // //     {
-// // // // // // //         IndexMaxStart = 1;
-// // // // // // //     }
+// // // // // // //     // Calculate the minimum number of deletions
+// // // // // // //     int result = max(indexMin, n - 1 - indexMax) + max(indexMax, n - 1 - indexMin);
 
-// // // // // // //     if (IndexMaxEnd > IndexMaxStart)
-// // // // // // //     {
-// // // // // // //         delMax = IndexMaxStart;
-// // // // // // //     }
+// // // // // // //     cout << result << endl;
 
-// // // // // // //     if (IndexMaxEnd < IndexMaxStart)
-// // // // // // //     {
-// // // // // // //         delMax = IndexMaxEnd;
-// // // // // // //     }
-
-// // // // // // //     if (IndexMinEnd > IndexMaxStart)
-// // // // // // //     {
-// // // // // // //         delMin = IndexMinStart;
-// // // // // // //     }
-
-// // // // // // //     if (IndexMinEnd < IndexMinStart)
-// // // // // // //     {
-// // // // // // //         delMin = IndexMinEnd;
-// // // // // // //     }
-
-// // // // // // //     cout << delMin + delMax;
+// // // // // // //     return 0;
 // // // // // // // }
 
-// // // // // // #include <algorithm>
 // // // // // // #include <iostream>
 // // // // // // #include <vector>
+// // // // // // #include <algorithm>
 
 // // // // // // using namespace std;
 
@@ -369,34 +487,14 @@
 // // // // // //     int minValue = *min_element(arr.begin(), arr.end());
 // // // // // //     int maxValue = *max_element(arr.begin(), arr.end());
 
-// // // // // //     int indexMinStart = -1;
-// // // // // //     int indexMinEnd = -1;
-// // // // // //     int indexMaxStart = -1;
-// // // // // //     int indexMaxEnd = -1;
+// // // // // //     int indexMin = -1;
+// // // // // //     int indexMax = -1;
 
 // // // // // //     for (int i = 0; i < n; i++)
 // // // // // //     {
 // // // // // //         if (arr[i] == minValue)
 // // // // // //         {
-// // // // // //             indexMinStart = i; // Fixed calculation of IndexMinStart
-// // // // // //             break;
-// // // // // //         }
-// // // // // //     }
-
-// // // // // //     for (int i = n - 1; i >= 0; i--)
-// // // // // //     {
-// // // // // //         if (arr[i] == minValue)
-// // // // // //         {
-// // // // // //             indexMinEnd = i;
-// // // // // //             break;
-// // // // // //         }
-// // // // // //     }
-
-// // // // // //     for (int i = 0; i < n; i++)
-// // // // // //     {
-// // // // // //         if (arr[i] == maxValue)
-// // // // // //         {
-// // // // // //             indexMaxStart = i;
+// // // // // //             indexMin = i;
 // // // // // //             break;
 // // // // // //         }
 // // // // // //     }
@@ -405,64 +503,108 @@
 // // // // // //     {
 // // // // // //         if (arr[i] == maxValue)
 // // // // // //         {
-// // // // // //             indexMaxEnd = i;
+// // // // // //             indexMax = i;
 // // // // // //             break;
 // // // // // //         }
 // // // // // //     }
 
-// // // // // //     int delMin = max(indexMinStart, n - 1 - indexMinEnd); // Fixed calculation of delMin
-// // // // // //     int delMax = max(indexMaxStart, n - 1 - indexMaxEnd); // Fixed calculation of delMax
+// // // // // //     // Calculate the minimum number of deletions
+// // // // // //     int result = max(indexMin, n - 1 - indexMin) + max(indexMax, n - 1 - indexMax);
 
-// // // // // //     cout << delMin + delMax << endl;
+// // // // // //     cout << result << endl;
 
 // // // // // //     return 0;
 // // // // // // }
 
+// // // // // // #include <iostream>
+// // // // // // #include <vector>
+// // // // // // #include <algorithm>
+
+// // // // // // using namespace std;
+
+// // // // // // int minDeletions(vector<int> &nums)
+// // // // // // {
+// // // // // //     int n = nums.size();
+// // // // // //     int minValue = *min_element(nums.begin(), nums.end());
+// // // // // //     int maxValue = *max_element(nums.begin(), nums.end());
+
+// // // // // //     int indexMin = -1;
+// // // // // //     int indexMax = -1;
+
+// // // // // //     for (int i = 0; i < n; i++)
+// // // // // //     {
+// // // // // //         if (nums[i] == minValue)
+// // // // // //         {
+// // // // // //             indexMin = i;
+// // // // // //             break;
+// // // // // //         }
+// // // // // //     }
+
+// // // // // //     for (int i = n - 1; i >= 0; i--)
+// // // // // //     {
+// // // // // //         if (nums[i] == maxValue)
+// // // // // //         {
+// // // // // //             indexMax = i;
+// // // // // //             break;
+// // // // // //         }
+// // // // // //     }
+
+// // // // // //     int frontDeletions = max(indexMin, n - 1 - indexMax);
+// // // // // //     int backDeletions = max(indexMax, n - 1 - indexMin);
+
+// // // // // //     return min(frontDeletions, backDeletions);
+// // // // // // }
+
+// // // // // // int main()
+// // // // // // {
+// // // // // //     // Example 1
+// // // // // //     vector<int> nums1 = {2, 10, 7, 5, 4, 1, 8, 6};
+// // // // // //     cout << "Example 1: " << minDeletions(nums1) << endl;
+
+// // // // // //     // Example 2
+// // // // // //     vector<int> nums2 = {0, -4, 19, 1, 8, -2, -3, 5};
+// // // // // //     cout << "Example 2: " << minDeletions(nums2) << endl;
+
+// // // // // //     // Example 3
+// // // // // //     vector<int> nums3 = {101};
+// // // // // //     cout << "Example 3: " << minDeletions(nums3) << endl;
+
+// // // // // //     return 0;
+// // // // // // }
 // // // // // #include <iostream>
 // // // // // #include <vector>
 // // // // // #include <algorithm>
 
 // // // // // using namespace std;
 
-// // // // // int main()
-// // // // // {
-// // // // //     int n;
-// // // // //     cin >> n;
-// // // // //     vector<int> arr(n);
+// // // // // int minDeletions(vector<int>& nums) {
+// // // // //     int n = nums.size();
 
-// // // // //     for (int i = 0; i < n; i++)
-// // // // //     {
-// // // // //         cin >> arr[i];
-// // // // //     }
+// // // // //     // Find the indices of the minimum and maximum elements
+// // // // //     int minIndex = distance(nums.begin(), min_element(nums.begin(), nums.end()));
+// // // // //     int maxIndex = distance(nums.begin(), max_element(nums.begin(), nums.end()));
 
-// // // // //     int minValue = *min_element(arr.begin(), arr.end());
-// // // // //     int maxValue = *max_element(arr.begin(), arr.end());
+// // // // //     // Find the length of the longest subarray including both minimum and maximum elements
+// // // // //     int subarrayLength = max(maxIndex, n - 1 - minIndex) - min(minIndex, n - 1 - maxIndex) + 1;
 
-// // // // //     int indexMin = -1;
-// // // // //     int indexMax = -1;
+// // // // //     // Calculate the number of deletions required
+// // // // //     int deletions = n - subarrayLength;
 
-// // // // //     for (int i = 0; i < n; i++)
-// // // // //     {
-// // // // //         if (arr[i] == minValue)
-// // // // //         {
-// // // // //             indexMin = i;
-// // // // //             break;
-// // // // //         }
-// // // // //     }
+// // // // //     return deletions;
+// // // // // }
 
-// // // // //     for (int i = n - 1; i >= 0; i--)
-// // // // //     {
-// // // // //         if (arr[i] == maxValue)
-// // // // //         {
-// // // // //             indexMax = i;
-// // // // //             break;
-// // // // //         }
-// // // // //     }
+// // // // // int main() {
+// // // // //     // Example 1
+// // // // //     vector<int> nums1 = {2, 10, 7, 5, 4, 1, 8, 6};
+// // // // //     cout << "Example 1: " << minDeletions(nums1) << endl;
 
-// // // // //     // Calculate the minimum number of deletions
-// // // // //     int result = max(indexMin, n - 1 - indexMax) + max(indexMax, n - 1 - indexMin);
+// // // // //     // Example 2
+// // // // //     vector<int> nums2 = {0, -4, 19, 1, 8, -2, -3, 5};
+// // // // //     cout << "Example 2: " << minDeletions(nums2) << endl;
 
-// // // // //     cout << result << endl;
+// // // // //     // Example 3
+// // // // //     vector<int> nums3 = {101};
+// // // // //     cout << "Example 3: " << minDeletions(nums3) << endl;
 
 // // // // //     return 0;
 // // // // // }
@@ -473,86 +615,22 @@
 
 // // // // using namespace std;
 
-// // // // int main()
-// // // // {
-// // // //     int n;
-// // // //     cin >> n;
-// // // //     vector<int> arr(n);
-
-// // // //     for (int i = 0; i < n; i++)
-// // // //     {
-// // // //         cin >> arr[i];
-// // // //     }
-
-// // // //     int minValue = *min_element(arr.begin(), arr.end());
-// // // //     int maxValue = *max_element(arr.begin(), arr.end());
-
-// // // //     int indexMin = -1;
-// // // //     int indexMax = -1;
-
-// // // //     for (int i = 0; i < n; i++)
-// // // //     {
-// // // //         if (arr[i] == minValue)
-// // // //         {
-// // // //             indexMin = i;
-// // // //             break;
-// // // //         }
-// // // //     }
-
-// // // //     for (int i = n - 1; i >= 0; i--)
-// // // //     {
-// // // //         if (arr[i] == maxValue)
-// // // //         {
-// // // //             indexMax = i;
-// // // //             break;
-// // // //         }
-// // // //     }
-
-// // // //     // Calculate the minimum number of deletions
-// // // //     int result = max(indexMin, n - 1 - indexMin) + max(indexMax, n - 1 - indexMax);
-
-// // // //     cout << result << endl;
-
-// // // //     return 0;
-// // // // }
-
-// // // // #include <iostream>
-// // // // #include <vector>
-// // // // #include <algorithm>
-
-// // // // using namespace std;
-
 // // // // int minDeletions(vector<int> &nums)
 // // // // {
 // // // //     int n = nums.size();
-// // // //     int minValue = *min_element(nums.begin(), nums.end());
-// // // //     int maxValue = *max_element(nums.begin(), nums.end());
 
-// // // //     int indexMin = -1;
-// // // //     int indexMax = -1;
+// // // //     // Find the indices of the minimum and maximum elements
+// // // //     int minIndex = distance(nums.begin(), min_element(nums.begin(), nums.end()));
+// // // //     int maxIndex = distance(nums.begin(), max_element(nums.begin(), nums.end()));
 
-// // // //     for (int i = 0; i < n; i++)
-// // // //     {
-// // // //         if (nums[i] == minValue)
-// // // //         {
-// // // //             indexMin = i;
-// // // //             break;
-// // // //         }
-// // // //     }
+// // // //     // Calculate the distances from the start and end
+// // // //     int distanceFromStart = min(minIndex, n - 1 - minIndex);
+// // // //     int distanceFromEnd = min(maxIndex, n - 1 - maxIndex);
 
-// // // //     for (int i = n - 1; i >= 0; i--)
-// // // //     {
-// // // //         if (nums[i] == maxValue)
-// // // //         {
-// // // //             indexMax = i;
-// // // //             break;
-// // // //         }
-// // // //     }
+// // // //     // Calculate the number of deletions required
+// // // //     int deletions = distanceFromStart + distanceFromEnd;
 
-// // // //     int frontDeletions = max(indexMin, n - 1 - indexMax);
-// // // //     int backDeletions = max(indexMax, n - 1 - indexMin);
-
-// // // //     return min(frontDeletions, backDeletions);
+// // // //     return deletions;
 // // // // }
 
 // // // // int main()
@@ -571,174 +649,159 @@
 
 // // // //     return 0;
 // // // // }
-// // // #include <iostream>
-// // // #include <vector>
-// // // #include <algorithm>
 
+// // // #include <bits/stdc++.h>
+// // // // #include <vector>
 // // // using namespace std;
 
-// // // int minDeletions(vector<int>& nums) {
-// // //     int n = nums.size();
+// // // int main()
+// // // {
+// // //     vector<int> nums = {3, 4, 5, 1, 2};
 
-// // //     // Find the indices of the minimum and maximum elements
-// // //     int minIndex = distance(nums.begin(), min_element(nums.begin(), nums.end()));
-// // //     int maxIndex = distance(nums.begin(), max_element(nums.begin(), nums.end()));
+// // //     // Rest of the code
 
-// // //     // Find the length of the longest subarray including both minimum and maximum elements
-// // //     int subarrayLength = max(maxIndex, n - 1 - minIndex) - min(minIndex, n - 1 - maxIndex) + 1;
+// // //     sort(nums.rbegin(), nums.rend());
 
-// // //     // Calculate the number of deletions required
-// // //     int deletions = n - subarrayLength;
+// // //     for (int i = 0; i < nums.size(); i++)
+// // //     {
+// // //         cout << nums[i] << endl;
+// // //     }
 
-// // //     return deletions;
-// // // }
-
-// // // int main() {
-// // //     // Example 1
-// // //     vector<int> nums1 = {2, 10, 7, 5, 4, 1, 8, 6};
-// // //     cout << "Example 1: " << minDeletions(nums1) << endl;
-
-// // //     // Example 2
-// // //     vector<int> nums2 = {0, -4, 19, 1, 8, -2, -3, 5};
-// // //     cout << "Example 2: " << minDeletions(nums2) << endl;
-
-// // //     // Example 3
-// // //     vector<int> nums3 = {101};
-// // //     cout << "Example 3: " << minDeletions(nums3) << endl;
+// // //     cout<<nums[nums.size()-1];
 
 // // //     return 0;
 // // // }
 
+// // // #include <iostream>
+
+// // // int main() {
+// // //     int arr[] = {1, 1, 2, 3, 4};
+// // //     int n = sizeof(arr) / sizeof(arr[0]);
+
+// // //     // XOR array with itself
+// // //     for (int i = 0; i < n; i++) {
+// // //         arr[i] = arr[i] ^ arr[i];
+// // //     }
+
+// // //     // Display the result
+// // //     std::cout << "Result after XOR with itself: ";
+// // //     for (int i = 0; i < n; i++) {
+// // //         std::cout << arr[i] << " ";
+// // //     }
+
+// // //     return 0;
+// // // }
+
+// // // make vector
+
 // // #include <iostream>
 // // #include <vector>
 // // #include <algorithm>
-
+// // #include <map>
 // // using namespace std;
-
-// // int minDeletions(vector<int> &nums)
-// // {
-// //     int n = nums.size();
-
-// //     // Find the indices of the minimum and maximum elements
-// //     int minIndex = distance(nums.begin(), min_element(nums.begin(), nums.end()));
-// //     int maxIndex = distance(nums.begin(), max_element(nums.begin(), nums.end()));
-
-// //     // Calculate the distances from the start and end
-// //     int distanceFromStart = min(minIndex, n - 1 - minIndex);
-// //     int distanceFromEnd = min(maxIndex, n - 1 - maxIndex);
-
-// //     // Calculate the number of deletions required
-// //     int deletions = distanceFromStart + distanceFromEnd;
-
-// //     return deletions;
-// // }
 
 // // int main()
 // // {
-// //     // Example 1
-// //     vector<int> nums1 = {2, 10, 7, 5, 4, 1, 8, 6};
-// //     cout << "Example 1: " << minDeletions(nums1) << endl;
+// //     vector<int> temp;
 
-// //     // Example 2
-// //     vector<int> nums2 = {0, -4, 19, 1, 8, -2, -3, 5};
-// //     cout << "Example 2: " << minDeletions(nums2) << endl;
+// //     temp = {1, 2, 3, 2};
 
-// //     // Example 3
-// //     vector<int> nums3 = {101};
-// //     cout << "Example 3: " << minDeletions(nums3) << endl;
+// //     map<int, int> mp;
+// //     for (auto i : temp)
+// //     {
+// //         mp[i]++;
+// //     }
 
-// //     return 0;
+// //     for (auto i : mp)
+// //     {
+// //         cout << i.first << " " << i.second << endl;
+// //     }
+
+// //     vector<int> temp2;
+
+// //     for (auto i : mp)
+// //     {
+// //         if (i.second == 1)
+// //         {
+// //             temp2.push_back(i.first);
+// //         }
+// //     }
+
+// //     for (int i = 0; i < temp2.size(); i++)
+// //     {
+// //         cout << temp2[i] << " ";
+// //     }
+// //     cout << endl;
+// //     cout << "__________________________________";
+// //     cout << endl;
+// //     int sum = 0;
+// //     for (int i = 0; i < temp2.size(); i++)
+// //     {
+// //         sum = sum + temp2[i];
+// //     }
+
+// //     cout << sum << endl;
 // // }
 
-// #include <bits/stdc++.h>
-// // #include <vector>
+// #include <iostream>
 // using namespace std;
+
+// // Node class to represent the elements
+// class Node
+// {
+// public:
+//     int data;
+//     Node *next;
+//     Node(int val) : data(val), next(nullptr) {}
+// };
+
+// // LinkedList class to manage the list
+// class LinkedList
+// {
+// public:
+//     Node *head;
+//     LinkedList() : head(nullptr) {}
+
+//     // Method to insert a new node at the end of the linked list
+//     void insert(int data)
+//     {
+//         Node *new_node = new Node(data);
+//         if (head == nullptr)
+//         {
+//             head = new_node;
+//         }
+//         else
+//         {
+//             Node *temp = head;
+//             while (temp->next != nullptr)
+//             {
+//                 temp = temp->next;
+//             }
+//             temp->next = new_node;
+//         }
+//     }
+
+//     // Method to display the linked list
+//     void display()
+//     {
+//         Node *temp = head;
+//         while (temp != nullptr)
+//         {
+//             cout << temp->data << " ";
+//             temp = temp->next;
+//         }
+//     }
+// };
 
 // int main()
 // {
-//     vector<int> nums = {3, 4, 5, 1, 2};
-
-//     // Rest of the code
-
-//     sort(nums.rbegin(), nums.rend());
-
-//     for (int i = 0; i < nums.size(); i++)
-//     {
-//         cout << nums[i] << endl;
-//     }
-
-//     cout<<nums[nums.size()-1];
-
-//     return 0;
-// }
-
-// #include <iostream>
-
-// int main() {
-//     int arr[] = {1, 1, 2, 3, 4};
+//     LinkedList list;
+//     int arr[] = {1, 2, 3, 4, 4, 5};
 //     int n = sizeof(arr) / sizeof(arr[0]);
-
-//     // XOR array with itself
-//     for (int i = 0; i < n; i++) {
-//         arr[i] = arr[i] ^ arr[i];
+//     for (int i = 0; i < n; i++)
+//     {
+//         list.insert(arr[i]);
 //     }
-
-//     // Display the result
-//     std::cout << "Result after XOR with itself: ";
-//     for (int i = 0; i < n; i++) {
-//         std::cout << arr[i] << " ";
-//     }
-
+//     list.display();
 //     return 0;
 // }
-
-// make vector
-
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <map>
-using namespace std;
-
-int main()
-{
-    vector<int> temp;
-
-    temp = {1, 2, 3, 2};
-
-    map<int, int> mp;
-    for (auto i : temp)
-    {
-        mp[i]++;
-    }
-
-    for (auto i : mp)
-    {
-        cout << i.first << " " << i.second << endl;
-    }
-
-    vector<int> temp2;
-
-    for (auto i : mp)
-    {
-        if (i.second == 1)
-        {
-            temp2.push_back(i.first);
-        }
-    }
-
-    for (int i = 0; i < temp2.size(); i++)
-    {
-        cout << temp2[i] << " ";
-    }
-    cout << endl;
-    cout << "__________________________________";
-    cout << endl;
-    int sum = 0;
-    for (int i = 0; i < temp2.size(); i++)
-    {
-        sum = sum + temp2[i];
-    }
-
-    cout << sum << endl;
-}

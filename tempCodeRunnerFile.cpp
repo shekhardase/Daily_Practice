@@ -1,5 +1,1 @@
-    nunnu(int value)
-    {
-        this->value = value;
-        this->pudha = NULL;
-    }
+    // node *temp = head;
