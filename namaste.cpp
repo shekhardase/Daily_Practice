@@ -829,3 +829,23 @@
 //         }
 //     }
 // }
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n  = 10;
+    int p = 2.00000;
+    int i = n;
+    double ans = 1 ;
+
+    //ans = 1024
+
+    while(i--)
+    {
+        ans  = ans *p;
+    }
+    cout<<ans;
+}
