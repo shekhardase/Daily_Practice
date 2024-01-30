@@ -695,7 +695,7 @@
 // //         return;
 // //     }
 
-// //     Node *temp = head;
+// //     Node *temp = nhead;
 // //     int cnt = 1;
 
 // //     while (cnt < position - 1)
