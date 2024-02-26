@@ -989,7 +989,25 @@
 
 //     // Display the linked list
 //     myList.display();
-    
 
 //     return 0;
 // }
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    vector<string> words = {"abc", "car", "ada", "racecar", "cool"};
+
+    cout << words[1];
+    // string str = "Hello, world!";
+    // reverse(str.begin(), str.end()); // str becomes "!dlrow ,olleH"
+cout<<endl;
+    reverse(words[1].begin(), words[1].end());
+    cout<<words[1];
+}
