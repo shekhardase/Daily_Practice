@@ -41,34 +41,37 @@ Node *createLinkedList(int size)
     return head;
 }
 
-// Empty function to pass the linked lists
+// Empty function to merge two sorted linked lists
 void MergeSort(Node *list1, Node *list2)
 {
-    // Your code here
-
     // Create two head pointers for two lists
     Node *head1 = list1;
     Node *head2 = list2;
 
+    // Create a dummy node to build the merged list
     Node *dummyNode = createNode(-1);
 
+    // Traverse both lists until one of them reaches the end
     while (list1 != NULL && list2 != NULL)
     {
+        // Compare the data of the current nodes
         if (list1->data < list2->data)
         {
+            // Append the current node of list1 to the merged list
             dummyNode->next = list1;
             dummyNode = list1;
             list1 = list1->next;
         }
-
         else
         {
+            // Append the current node of list2 to the merged list
             dummyNode->next = list2;
             dummyNode = list2;
             list2 = list2->next;
         }
     }
 
+    // Append the remaining nodes of list1 or list2 to the merged list
     if (list1)
     {
         dummyNode->next = list1;
