@@ -1060,12 +1060,11 @@
 // // //     {
 // // //         for(int j = 0 ; j<m ; j++)
 // // //         {
-            
+
 // // //         }
 
 // // //     }
 // // // }
-
 
 // // #include <iostream>
 
@@ -1127,17 +1126,15 @@
 // //     return 0;
 // // }
 
-
-
 // class Solution
 // {
 //     private:
 //     ListNode* reverse(ListNode* head) {
-        
+
 //         ListNode* curr = head;
 //         ListNode* prev = NULL;
 //         ListNode* next = NULL;
-        
+
 //         while(curr != NULL) {
 //             next = curr -> next;
 //             curr -> next = prev;
@@ -1146,9 +1143,9 @@
 //         }
 //         return prev;
 //     }
-    
+
 //     void insertAtTail(struct ListNode* &head, struct ListNode* &tail, int val) {
-        
+
 //         ListNode* temp = new ListNode(val);
 //         //empty list
 //         if(head == NULL) {
@@ -1162,35 +1159,34 @@
 //             tail = temp;
 //         }
 //     }
-    
+
 //     struct ListNode* add(struct ListNode* first, struct ListNode* second) {
 //         int carry = 0;
-        
+
 //         ListNode* ansHead = NULL;
 //         ListNode* ansTail = NULL;
-        
+
 //         while(first != NULL || second != NULL || carry != 0) {
-            
+
 //             int val1 = 0;
 //             if(first != NULL)
 //                 val1 = first -> data;
-                
+
 //             int val2 = 0;
 //             if(second !=NULL)
 //                 val2 = second -> data;
-            
-            
+
 //             int sum = carry + val1 + val2;
-            
+
 //             int digit = sum%10;
-            
+
 //             //create ListNode and add in answer Linked List
 //             insertAtTail(ansHead, ansTail, digit);
-            
+
 //             carry = sum/10;
 //             if(first != NULL)
 //                 first = first -> next;
-            
+
 //             if(second != NULL)
 //                 second = second -> next;
 //         }
@@ -1203,13 +1199,43 @@
 //         //step 1 -  reverse input LL
 //         first = reverse(first);
 //         second = reverse(second);
-        
+
 //         //step2 - add 2 LL
 //         ListNode* ans = add(first, second);
-        
-//         //step 3 
+
+//         //step 3
 //         ans = reverse(ans);
-        
+
 //         return ans;
 //     }
 // };
+
+// ---------------------------------------------------------------------------------------------------------------------
+#include <vector>
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    vector<string> list1 = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
+    vector<string> list2 = {"Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"};
+    vector<string> list3;
+    // Rest of your code...
+
+    for (int i = 0; i < list1.size(); i++)
+    {
+        for (int j = i+1; j < list1.size(); j++)
+        {
+            if (list1[i] == list2[j])
+            {
+                list3.push_back(list1[i]);
+            }
+        }
+    }
+
+   for (const auto& l : list3) {
+       std::cout << l << std::endl;
+   }
+    
+    return 0;
+}
