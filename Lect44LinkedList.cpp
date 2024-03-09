@@ -1054,3 +1054,114 @@
 
 // //     return 0;
 // // }
+
+#include <iostream>
+
+using namespace std;
+
+// Node structure for the linked list
+struct Node
+{
+    int data;
+    Node *next;
+    Node *child;
+
+    Node(int val) : data(val), next(nullptr), child(nullptr) {}
+};
+
+// Function to create a linked list with 'n' head nodes
+Node *createLinkedList(int n)
+{
+    Node *head = nullptr;
+    Node *tail = nullptr;
+
+    // Iterate to create 'n' head nodes
+    for (int i = 1; i <= n; ++i)
+    {
+        // Creating a new head node
+        Node *newNode = new Node(i * 10); // Assuming each node contains data in increments of 10
+        if (!head)
+        {
+            head = tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
+
+        // Attaching a child linked list to every head node
+        Node *childHead = nullptr;
+        Node *childTail = nullptr;
+        for (int j = 1; j <= i * 2; ++j)
+        {                                           // Assuming each child list has 2 nodes for simplicity
+            Node *childNode = new Node(i * 10 + j); // Assuming data in child list increments by 1
+            if (!childHead)
+            {
+                childHead = childTail = childNode;
+            }
+            else
+            {
+                childTail->next = childNode;
+                childTail = childNode;
+            }
+        }
+        newNode->child = childHead;
+    }
+
+    return head;
+}
+
+// Function to print the linked list along with its child lists
+void printLinkedList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " -> ";
+        Node *child = head->child;
+        while (child)
+        {
+            cout << child->data << " -> ";
+            child = child->next;
+        }
+        cout << "NULL" << endl;
+        head = head->next;
+    }
+    cout << "NULL" << endl;
+}
+
+// Function to delete the linked list
+void deleteLinkedList(Node *head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+
+        // Deleting child linked list as well
+        Node *child = temp->child;
+        while (child)
+        {
+            Node *tempChild = child;
+            child = child->next;
+            delete tempChild;
+        }
+    }
+}
+
+int main()
+{
+    // Creating a linked list with 'n' head nodes
+    int n = 3; // Number of head nodes
+    Node *head = createLinkedList(n);
+
+    // Printing the linked list
+    cout << "Linked List:" << endl;
+    printLinkedList(head);
+
+    // Deleting the linked list to free memory
+    deleteLinkedList(head);
+
+    return 0;
+}
