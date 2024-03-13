@@ -634,7 +634,16 @@ int main()
             if (ans[i] + ans[j] == 0)
             {
                 // print.push_back(ans[i]);
-                print.erase(i);
+    vector<int> print;
+
+    for (int i = 0; i < ans.size(); i++)
+    {
+        for (int j = 0; j < ans.size(); j++)
+        {
+            if (ans[i] + ans[j] == 0)
+            {
+                print.push_back(ans[i]);
+                
             }
         }
     }
