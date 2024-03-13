@@ -482,7 +482,7 @@
 // {
 //     while (head != nullptr)
 //     {
-//         std::cout << std::string(depth * 2, ' ') << head->data << std::endl;
+//         cout << string(depth * 2, ' ') << head->data << endl;
 //         if (head->child)
 //             printList(head->child, depth + 1);
 //         head = head->next;
@@ -509,9 +509,9 @@
 //     head->next->next->next->child->next = new Node(12);
 
 //     // Printing the linked list
-//     std::cout << "Linked List with children: ";
+//     cout << "Linked List with children: ";
 //     printList(head , 0 );
-//     std::cout << std::endl;
+//     cout << endl;
 
 //     // Deleting the linked list to free memory
 //     while (head != nullptr)
@@ -523,7 +523,7 @@
 
 //     return 0;
 // }
-/* 
+/*
 function flattenLinkedList(head):
     current = head
     while current is not null:
@@ -539,3 +539,111 @@ function flattenLinkedList(head):
             current.child = null
         current = current.next
  */
+
+// #include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+// Define the structure of a node in the linked list
+struct Node
+{
+    int data;
+    Node *next;
+
+    // Constructor to initialize data and next pointer
+    Node(int d) : data(d), next(nullptr) {}
+};
+
+// Function to print the linked list
+void printLinkedList(Node *head)
+{
+    while (head != nullptr)
+    {
+        cout << head->data;
+        if (head->next != nullptr)
+            cout << " -> ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+// Function to create a linked list from an array
+Node *createLinkedList(int arr[], int size)
+{
+    Node *head = nullptr;
+    Node *tail = nullptr;
+
+    for (int i = 0; i < size; ++i)
+    {
+        Node *newNode = new Node(arr[i]);
+
+        if (head == nullptr)
+        {
+            head = tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
+
+    return head;
+}
+int main()
+{
+    int arr[] = {1, 2, -3, 3, 1};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    // Create linked list from the array
+    Node *head = createLinkedList(arr, size);
+
+    // Populate vector ans
+    vector<int> ans;
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        ans.push_back(temp->data);
+        temp = temp->next;
+    }
+
+    // Print the linked list
+    printLinkedList(head);
+    cout << endl; // Add this line to print a newline
+
+    // Free memory by deleting the nodes
+    Node *current = head;
+    while (current != nullptr)
+    {
+        Node *next = current->next;
+        delete current;
+        current = next;
+    }
+
+    // Print the vector
+    for (int i = 0; i < ans.size(); i++)
+    {
+        cout << ans[i] << " ";
+    }
+
+    vector<int> print;
+
+    for (int i = 0; i < ans.size(); i++)
+    {
+        for (int j = 0; j < ans.size(); j++)
+        {
+            if (ans[i] + ans[j] == 0)
+            {
+                // print.push_back(ans[i]);
+                print.erase(i);
+            }
+        }
+    }
+
+    // Print the vector
+    for (int i = 0; i < print.size(); i++)
+    {
+        cout << print[i] << " ";
+    }
+
+    return 0;
+}
