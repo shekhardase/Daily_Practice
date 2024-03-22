@@ -634,25 +634,26 @@ int main()
             if (ans[i] + ans[j] == 0)
             {
                 // print.push_back(ans[i]);
-    vector<int> print;
+                vector<int> print;
 
-    for (int i = 0; i < ans.size(); i++)
-    {
-        for (int j = 0; j < ans.size(); j++)
-        {
-            if (ans[i] + ans[j] == 0)
-            {
-                print.push_back(ans[i]);
-                
+                for (int i = 0; i < ans.size(); i++)
+                {
+                    for (int j = 0; j < ans.size(); j++)
+                    {
+                        if (ans[i] + ans[j] == 0)
+                        {
+                            print.push_back(ans[i]);
+                        }
+                    }
+                }
+
+                // Print the vector
+                for (int i = 0; i < print.size(); i++)
+                {
+                    cout << print[i] << " ";
+                }
+
+                return 0;
             }
         }
     }
-
-    // Print the vector
-    for (int i = 0; i < print.size(); i++)
-    {
-        cout << print[i] << " ";
-    }
-
-    return 0;
-}
