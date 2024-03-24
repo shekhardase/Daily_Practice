@@ -1240,14 +1240,135 @@
 // //     return 0;
 // // }
 
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> nums = {1, 1, 1, 2, 2, 3};
+
+//     // op = 1 1 2 2 3
+
+// }
+
 #include <bits/stdc++.h>
 using namespace std;
 
+class st
+{
+public:
+    int *nums; // arry to store stack elements
+    int top;
+    int size;
+
+    st(int size)
+    {
+        this->size = size;
+        nums = new int[size];
+
+        top = -1;
+    }
+
+    void push(int number)
+    {
+        if (size - top > 1)
+        {
+            top++;
+            nums[top] = number;
+        }
+        else
+        {
+            cout << "Stack overflow - it has no space for other elements " << endl;
+        }
+    }
+
+    void pop()
+    {
+        if (top >= 0)
+        {
+            top--;
+        }
+
+        else
+        {
+            cout << "Stack undeflow "
+                 << "stack has no elements to pop out " << endl;
+        }
+    }
+
+    int peek()
+    {
+        if (top >= 0)
+        {
+            return nums[top];
+        }
+
+        else
+        {
+            cout << "Stack is empty " << endl;
+            return -1;
+        }
+    }
+
+    bool isEmpty()
+    {
+        if (top == -1)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+
+    void clear()
+    {
+        top = -1;
+    }
+
+    void display()
+    {
+        for (int i = top; i >= 0; i--)
+        {
+            cout << nums[i] << " ";
+        }
+        cout << endl;
+    }
+
+    void checksame()
+    {
+        if (nums[top] == nums[top - 1])
+        {
+            cout << " __________ " << endl;
+            cout << "real" << endl;
+            cout << " __________ " << endl;
+        }
+
+        else
+        {
+            cout << "false" << endl;
+        }
+    }
+};
+
 int main()
 {
-    vector<int> nums = {1, 1, 1, 2, 2, 3};
+    st s(101);
+    // for(int i = 0 ; ) F
 
-    // op = 1 1 2 2 3 
+    for (int i = 0; i < 100; i++)
+    {
+        s.push(i);
+        // cout << s.peek() << endl;
+    }
 
-    
+    s.push(99);
+
+    s.checksame();
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    s.display();
 }
