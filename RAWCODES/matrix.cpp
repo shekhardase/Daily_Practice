@@ -5,7 +5,7 @@
 // // // //     // int matrix[0]
 // // // //     int m;
 // // // //     cin >> m;
-// // // //     int n;
+// // // //     int n;q
 // // // //     cin >> n;
 
 // // // //     int matrix[m][n];
