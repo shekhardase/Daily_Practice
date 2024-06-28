@@ -1,18 +1,17 @@
-#include <iostream>
-using namespace std;
+void reverse(int arr[], int n)
+// {
+//     if (n < 0)
+//     {
+//         return;
+//     }
+//     cout << arr[n] << " ";
+//     n--;
+//     reverse(arr, n);
+// }
 
-int print(int n)
-{
-    if (n == 0)
-    {
-        return 0;
-    }
-
-    cout << "This is recursion" << endl;
-    return print(n - 1);
-}
-
-int main()
-{
-    print(9); // Change the argument to 9 to avoid infinite recursion
-}
+// int main()
+// {
+//     int n = 5;
+//     int arr[n] = {1, 2, 3, 4, 5, 6};
+//     reverse(arr, n);
+// }
