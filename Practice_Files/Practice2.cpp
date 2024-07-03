@@ -1,42 +1,45 @@
-// #include <bits/stdc++.h>
+// // #include <bits/stdc++.h>
+// // using namespace std;
+
+// // bool pali(string str, int start, int end)
+// // {
+// //     if (str[start] != str[end])
+// //     {
+// //         return false;
+// //     }
+// //     start++;
+// //     end--;
+// //     pali(str, start, end);
+// //     return true;
+// // }
+
+// // int main()
+// // {
+// //     string str = "aabbaa";
+
+// //     int start = 0;
+// //     int end = str.size() - 1;
+// //     cout << pali(str, start, end);
+// // }
+
+// #include <iostream>
 // using namespace std;
 
 // bool pali(string str, int start, int end)
 // {
+//     if (start >= end)
+//     {
+//         return true; // Base case: if start index is greater than or equal to end index, it's a palindrome
+//     }
 //     if (str[start] != str[end])
 //     {
-//         return false;
+//         return false; // If characters at start and end are different, it's not a palindrome
 //     }
-//     start++;
-//     end--;
-//     pali(str, start, end);
-//     return true;
-// }
-
-// int main()
-// {
-//     string str = "aabbaa";
-
-//     int start = 0;
-//     int end = str.size() - 1;
-//     cout << pali(str, start, end);
+//     return pali(str, start + 1, end - 1); // Recursively check the next pair of characters
 // }
 
 #include <iostream>
 using namespace std;
-
-bool pali(string str, int start, int end)
-{
-    if (start >= end)
-    {
-        return true; // Base case: if start index is greater than or equal to end index, it's a palindrome
-    }
-    if (str[start] != str[end])
-    {
-        return false; // If characters at start and end are different, it's not a palindrome
-    }
-    return pali(str, start + 1, end - 1); // Recursively check the next pair of characters
-}
 
 int fibo(int n)
 {
@@ -53,11 +56,11 @@ int fibo(int n)
 
 int main()
 {
-    string str = "aabbaa";
+    // string str = "aabbaa";
 
-    int start = 0;
-    int end = str.size() - 1;
-    cout << (pali(str, start, end) ? "true" : "false") << endl;
+    // int start = 0;
+    // int end = str.size() - 1;
+    // cout << (pali(str, start, end) ? "true" : "false") << endl;
 
     int n;
     cin >> n;
