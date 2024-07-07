@@ -318,3 +318,22 @@
 // // }
 
 // #inlcude<>
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int bottles = 15;
+    int exchange = 4;
+
+    int afterDivide = bottles / exchange;
+    // bottles = bottles - afterDivide;
+    cout << bottles << endl;
+    cout << afterDivide << endl;
+
+    bottles = bottles + afterDivide;
+    cout << bottles << endl;
+
+    return 0;
+}
