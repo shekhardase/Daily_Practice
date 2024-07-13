@@ -1,20 +1,20 @@
-// pyramid
-
 #include <iostream>
 using namespace std;
-
 int main()
 {
-    for (int i = 0; i < 10; i++)
+
+    int n = 10;
+    for (int i = 0; i < n; i++)
     {
-        for (int k = 10; k > i; k--)
+        for (int k = n; k > i; k--)
         {
             cout << " ";
         }
         for (int j = 0; j < i; j++)
         {
-            cout << i << " ";
+            cout << "*";
         }
+
         cout << endl;
     }
 }

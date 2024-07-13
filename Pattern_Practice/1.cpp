@@ -3,21 +3,34 @@ using namespace std;
 
 int main()
 {
-    for (int i = 0; i < 10; i++) // Loop to handle the number of rows (10 rows in total)
+
+    for (int col = 0; col < 10; col++)
     {
-        for (int j = 0; j <= i; j++) // Loop to print stars in each row. Number of stars is equal to row number + 1
+        for (int row = 0; row <= col; row++)
         {
-            cout << "*"; // Print a star
+            cout << "*";
         }
-        cout << endl; // Move to the next line after printing stars for the current row
+        cout << endl;
     }
+    cout << endl;
+    for (int col = 0; col < 10; col++)
+    {
+        for (int row = 0; row < 10; row++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    cout << endl;
 
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    cout << endl;
-
-    // for(int i = 0 ; i < )
+    for (int col = 0; col < 10; col++)
+    {
+        for (int row = 10; row > col; row--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
 
     return 0;
 }

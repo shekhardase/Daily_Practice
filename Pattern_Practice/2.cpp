@@ -24,4 +24,14 @@ int main()
         }
         cout << endl;
     }
+    cout << endl;
+
+    for (int col = 0; col < 10; col++)
+    {
+        for (int row = 10; row > 10; row--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
 }
