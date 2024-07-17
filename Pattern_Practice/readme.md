@@ -24,4 +24,4 @@ Feel free to reach out to me if you have any questions, suggestions, or just wan
 
 ---
 
-![CodeChef Learning](https://i.pinimg.com/originals/fe/9b/81/fe9b81daa32f2b8ec060546acd982972.png)
+![meme](https://i.pinimg.com/564x/f8/59/51/f85951fd725439f710c3b1e3b0536c2e.jpg)
