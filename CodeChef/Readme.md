@@ -12,7 +12,6 @@ I've solved many problems before creating this repository, and it's not possible
 
 Check out my CodeChef profile for more of my solutions and activity:
 [**My CodeChef Profile**](https://www.codechef.com/users/shekhardase)
-
-
+*(Really, don't check it, I'm noob af! 😅)*
 
 Happy coding! 🚀
