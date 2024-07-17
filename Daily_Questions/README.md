@@ -13,3 +13,5 @@ If you have any questions, suggestions, or just want to connect, you can reach o
 ---
 
 Happy coding! 😄💻🚀
+
+![Programming Angry Punching Keyboard](https://gifdb.com/images/high/programming-angry-punching-keyboard-fw45yh2e39g24ylb.gif)
