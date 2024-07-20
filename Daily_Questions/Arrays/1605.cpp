@@ -1,0 +1,32 @@
+// https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums/submissions/1326896595/?envType=daily-question&envId=2024-07-20
+
+// class Solution
+// {
+//     public:
+//         vector<vector < int>> restoreMatrix(vector<int> &rowSum,
+//             vector<int> &colSum)
+//         {
+//             int m = rowSum.size();
+//             int n = colSum.size();
+//             vector<vector < int>> vec(m, vector<int> (n));
+
+//             int i = 0, j = 0;
+//             while (i < m && j < n)
+//             {
+//                 vec[i][j] = min(rowSum[i], colSum[j]);
+
+//                 rowSum[i] -= vec[i][j];
+//                 colSum[j] -= vec[i][j];
+
+//                 if (rowSum[i] == 0)
+//                 {
+//                     i++;
+//                 }
+//                 if (colSum[j] == 0)
+//                 {
+//                     j++;
+//                 }
+//             }
+//             return vec;
+//         }
+// };
