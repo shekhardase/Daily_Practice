@@ -89,3 +89,41 @@
 //     z = !!x;
 //     cout<<y<<" "<<z;
 // }
+
+// #include<iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int p = 1 , q = 2;
+
+//     for(int i = 0 ;  i <= 6 ; i =i +2)
+//     {
+//         p = p + q + i ;
+//         p = p + q;
+//         q = p -q ;
+//         cout<<q << " ";
+//     }
+// }
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    // int c = 5, no = 1000;
+    // do
+    // {
+    //     no /= c;
+    // } while (c--);
+    // // printf("%d\n", no);
+    // cout << no << endl;
+    // return 0;
+
+    int a = 24 ,  b = 8;
+    cout<<b<<a<<endl;
+    int b = 8;  // 1000 in binary
+    int a = 24; // Decimal value 24
+    int result = b << a;
+
+    cout << "b << a = " << result << endl; // Should output 134217728
+}
