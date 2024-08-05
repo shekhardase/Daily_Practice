@@ -79,13 +79,13 @@
 //     cout<<count;
 // }
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main()
-{
-    int x = 11, y = 4, z = 3;
-    y = !x;
-    z = !!x;
-    cout<<y<<" "<<z;
-}
+// int main()
+// {
+//     int x = 11, y = 4, z = 3;
+//     y = !x;
+//     z = !!x;
+//     cout<<y<<" "<<z;
+// }
