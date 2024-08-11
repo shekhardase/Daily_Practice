@@ -40,7 +40,8 @@
 
 //         int n;
 //         cin>>n;
-//         vector<long long> arr(n);
+//         vector<lon
+// g long> arr(n);
 //         for(int i=0;i<n;i++)
 //             cin>>arr[i];
 
@@ -50,5 +51,6 @@
 //         cout<<endl;
 //     }
 // 	return 0;
+
 // }
 // // } Driver Code Ends
