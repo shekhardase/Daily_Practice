@@ -1,46 +1,29 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
-bool canEat(int banana, int ans, int hour, int &count)
-{
-    while (banana > 0)
-    {
-        banana = banana - ans;
-        // cout<<banana<<" ";
-        count++;
-        // cout << count << endl;
-        if (count > hour)
-        {
-
-            return false;
-            break;
-        }
-    }
-
-    cout << "possible" << " ";
-    // cout<<count<<endl;
-    return true;
-}
 
 int main()
 {
-    vector<int> piles = {3, 6, 7, 11};
     int hour = 8;
-    int ans = 0;
+    vector<int> piles = {3, 6, 7, 11};
+    // cout << ;
+    // int speed = 6;
     int count = 0;
 
-    for (int i = 0; i < 10; i++)
+    for (int j = 1; j < piles[piles.size() - 1]; j++)
     {
-        ans = i;
-        for (int j = 0; j < piles.size(); j++)
+        for (int i = 0; i < piles.size(); i++)
         {
-            if (canEat(piles[j], ans, hour, count))
+            while (piles[i] > 0)
             {
-                cout << ans << endl;
+                piles[i] = piles[i] - j;
+                count++;
             }
+            if (count > hour)
+            {
+                count = 0;
+            }
+
+            cout << count << endl;
         }
     }
-
-    return 0;
 }
