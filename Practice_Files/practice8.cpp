@@ -20,7 +20,7 @@ int main()
             }
             if (count > hour)
             {
-                count = 0;
+                break;
             }
 
             cout << count << endl;
