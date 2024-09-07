@@ -1,36 +1,30 @@
-// https://leetcode.com/problems/koko-eating-bananas/
-
-// class Solution
-// {
-//     public:
-//         bool can(vector<int> &piles, int h, int mid)
-//         {
-//             int hrs = 0;
-//             for (int i: piles)
-//             {
-//                 hrs += ceil(static_cast<double> (i) / mid);	// Use integer division to compute the ceiling
-//             }
-//             return hrs <= h;
-//         }
-
-//     int minEatingSpeed(vector<int> &piles, int h)
-//     {
-//         int minspeed = 1;	// Speed cannot be 0
-//         int maxspeed = *max_element(piles.begin(), piles.end());
-
-//         while (minspeed < maxspeed)
-//         {
-//             int mid = minspeed + (maxspeed - minspeed) / 2;
-
-//             if (can(piles, h, mid))
-//             {
-//                 maxspeed = mid;	// If it's possible to eat at speed mid, try for a lower speed
-//             }
-//             else
-//             {
-//                 minspeed = mid + 1;	// If not possible, increase the speed
+// class Solution {
+// public:
+//     bool canEatAll(vector<int>& piles, int speed, int h) {
+//         int hoursCounted = 0;
+//         for (int& x : piles) {
+//             hoursCounted += (x / speed);
+//             if (x % speed != 0) {
+//                 hoursCounted++;
 //             }
 //         }
-//         return minspeed;
+//         return hoursCounted <= h;
+//     }
+
+//     int minEatingSpeed(vector<int>& piles, int h) {
+//         int low = 1;
+//         int high = *max_element(begin(piles), end(piles));
+
+//         // int speed = (high - low) / 2;
+
+//         while (low < high) {
+//             int speed =  low + (high - low) / 2;
+//             if (canEatAll(piles, speed, h)) {
+//                 high = speed;
+//             } else {
+//                 low = speed + 1;
+//             }
+//         }
+//         return low;
 //     }
 // };
