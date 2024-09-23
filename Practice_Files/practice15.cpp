@@ -36,6 +36,24 @@ int main()
             best = distance;
         }
     }
-    cout << best;
+
+    int low = 1;
+    int high = stalls[n - 1] - stalls[0];
+    int mid = high - (high - low) / 2;
+
+    while (low <= high)
+    {
+        if (isPossible(stalls, mid, cows))
+        {
+            low = mid + 1;
+        }
+        else
+        {
+            high = mid - 1;
+        }
+        mid = high - (high - low) / 2;
+    }
+    cout << best << endl;
+    cout << mid;
     // return 0;
 }
