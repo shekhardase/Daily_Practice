@@ -1,0 +1,1 @@
+mp.insert({element, result});
