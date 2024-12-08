@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 class node
@@ -16,9 +16,9 @@ public:
     }
 };
 
-node *buildTree(node *root)
+node *BuildTree(node *root)
 {
-    cout << "Enter the Data : " << endl;
+    cout << "Enter the data : " << endl;
     int data;
     cin >> data;
 
@@ -29,14 +29,60 @@ node *buildTree(node *root)
         return NULL;
     }
 
-    cout << "Enter the data for inserting in left of " << data << endl;
-    root->left = buildTree(root->left);
-    cout << "Enter the data for inserting in right of " << data << endl;
-    root->right = buildTree(root->right);
+    cout << "Enter data for inserting in left : " << data << endl;
+
+    root->left = BuildTree(root->left);
+    cout << "Enter data for inserting in Right : " << data << endl;
+
+    root->right = BuildTree(root->right);
+
     return root;
+}
+
+void LevelOrderTraversal(node *root) // also called as Breadth-First Search (BFS) traversal
+{
+    queue<node *> q;
+    q.push(root);
+    q.push(NULL);
+
+    while (!q.empty())
+    {
+        node *temp = q.front();
+
+        q.pop();
+
+        if (temp == NULL)
+        {
+            // purana level complete traverse ho chuka hai
+            cout << endl;
+            if (!q.empty()) // q still has some child nodes
+            {
+                q.push(NULL);
+            }
+        }
+        else
+        {
+            cout << " " <<temp->data << " ";
+            if (temp->l1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1eft)
+            {
+                q.push(temp->left);
+            }
+
+            if (temp->right)
+            {
+                q.push(temp->right);
+            }
+        }
+    }
 }
 
 int main()
 {
-    
+    node *root = NULL;
+    root = BuildTree(root);
+    cout << "Printing the level order traversal output " << endl;
+    LevelOrderTraversal(root);
+    return 0;
 }
+
+// 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
