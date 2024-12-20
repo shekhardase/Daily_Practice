@@ -35,9 +35,63 @@ node *build(node *root)
     return root;
 }
 
+}
+void LevelOrderTraversal(node *root)
+{
+    queue<node *> q;
+    q.push(root);
+    q.push(NULL);
+
+    while (!q.empty())
+    {
+        node *temp = q.front();
+        q.pop();
+
+        if (temp == NULL)
+        {
+            cout << endl;
+            if (!q.empty())
+            {
+                q.push(NULL);
+            }
+        }
+
+        else
+        {
+            cout << temp->data << " ";
+            if (temp->left)
+            {
+                q.push(temp->left);
+            }
+            if (temp->right)
+            {
+                q.push(temp->right);
+            }
+        }
+    }
+}
+
+void test(node *root)
+{
+    queue<node *> q;
+    q.push(root);
+    // q.push(NULL)
+    cout << q.front() << endl;
+    node *temp = q.front();
+    cout << temp->data << endl;
+    q.pop();
+    cout << q.front() << endl;
+
+
 int main()
 {
     node *root = NULL;
-    build(root);
+    root = build(root);
+    cout << "Level Order Traversing" << endl;
+    LevelOrderTraversal(root);
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    test(root);
     return 0;
 }
