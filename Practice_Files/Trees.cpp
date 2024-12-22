@@ -35,7 +35,6 @@ node *build(node *root)
     return root;
 }
 
-}
 void LevelOrderTraversal(node *root)
 {
     queue<node *> q;
@@ -71,17 +70,119 @@ void LevelOrderTraversal(node *root)
     }
 }
 
-void test(node *root)
-{
-    queue<node *> q;
-    q.push(root);
-    // q.push(NULL)
-    cout << q.front() << endl;
-    node *temp = q.front();
-    cout << temp->data << endl;
-    q.pop();
-    cout << q.front() << endl;
+// void reverseLevelTraversal(node *root)
+// {
+//     queue<node *> q;
+//     q.push(root);
+//     q.push(nullptr);
 
+//     while (!q.empty())
+//     {
+//         node *temp = q.front();
+//         q.pop();
+
+//         if (temp == NULL)
+//         {
+//             cout << endl;
+//             if (!q.empty())
+//             {
+//                 q.push(NULL);
+//             }
+//         }
+
+//         else
+//         {
+//             cout << temp->data << " ";
+//             if (temp->right)
+//             {
+//                 q.push(temp->right);
+//             }
+//             if (temp->left)
+//             {
+//                 q.push(temp->left);
+//             }
+//         }
+//     }
+// }
+
+void Depth_For_Search(node *root)
+{
+    deque<node *> q;
+    q.push_front(root);
+    q.push_front(NULL);
+
+    while (!q.empty())
+    {
+        node *temp = q.front();
+        q.pop_back();
+
+        if (temp == NULL)
+        {
+            cout << endl;
+            if (!q.empty())
+            {
+                q.push_back(NULL);
+            }
+        }
+
+        else
+        {
+            cout << temp->data << " ";
+            if (temp->left)
+            {
+                q.push_back(temp->left);
+            }
+            if (temp->right)
+            {
+                q.push_back(temp->right);
+            }
+        }
+    }
+}
+
+void InOrder(node *root)
+{
+    node *temp = root;
+    if (temp == NULL)
+    {
+        cout << endl;
+        return;
+    }
+
+    InOrder(temp->left);
+    cout << temp->data << " ";
+    InOrder(temp->right);
+}
+
+void PreOrder(node *root)
+{
+    node *temp = root;
+
+    if (temp == NULL)
+    {
+        cout << endl;
+        return;
+    }
+
+    cout << temp->data << " ";
+
+    PreOrder(temp->left);
+    PreOrder(temp->right);
+}
+void PostOrder(node *root)
+{
+    node *temp = root;
+
+    if (temp == NULL)
+    {
+        cout << endl;
+        return;
+    }
+
+    PreOrder(temp->left);
+    PreOrder(temp->right);
+    cout << temp->data << " ";
+}
 
 int main()
 {
@@ -92,6 +193,20 @@ int main()
     cout << endl;
     cout << endl;
     cout << endl;
-    test(root);
+    // // test(root);
+
+    // cout << "Reverse Order Traversing " << endl;
+    // reverseLevelTraversal(root);
+    // Depth_For_Search(root);
+
+    cout << "PreOrder Traversal " << endl;
+    PreOrder(root);
+    cout << endl;
+    cout << "PostOrder Traversal " << endl;
+    PostOrder(root);
+    cout << endl;
+    cout << "InOrder Traversal " << endl;
+    InOrder(root);
+    cout << endl;
     return 0;
 }
