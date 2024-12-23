@@ -35,7 +35,7 @@ node *build(node *root)
     return root;
 }
 
-void LevelOrderTraversal(node *root)
+void LevelOrderTraversal(node *root) // Breadth first search
 {
     queue<node *> q;
     q.push(root);
@@ -103,42 +103,45 @@ void LevelOrderTraversal(node *root)
 //             }
 //         }
 //     }
+
 // }
 
-void Depth_For_Search(node *root)
-{
-    deque<node *> q;
-    q.push_front(root);
-    q.push_front(NULL);
+// void Depth_For_Search(node *root)
+// {
+//     deque<node *> q;
+//     q.push_front(root);
+//     q.push_front(NULL);
 
-    while (!q.empty())
-    {
-        node *temp = q.front();
-        q.pop_back();
+//     while (!q.empty())
+//     {
+//         node *temp = q.front();
+//         q.pop_back();
 
-        if (temp == NULL)
-        {
-            cout << endl;
-            if (!q.empty())
-            {
-                q.push_back(NULL);
-            }
-        }
+//         if (temp == NULL)
+//         {
+//             cout << endl;
+//             if (!q.empty())
+//             {
+//                 q.push_back(NULL);
+//             }
+//         }
 
-        else
-        {
-            cout << temp->data << " ";
-            if (temp->left)
-            {
-                q.push_back(temp->left);
-            }
-            if (temp->right)
-            {
-                q.push_back(temp->right);
-            }
-        }
-    }
-}
+//         else
+//         {
+//             cout << temp->data << " ";
+//             if (temp->left)
+//             {
+//                 q.push_back(temp->left);
+//             }
+//             if (temp->right)
+//             {
+//                 q.push_back(temp->right);
+//             }
+//         }
+//     }
+// }
+
+// Depth First Search
 
 void InOrder(node *root)
 {
