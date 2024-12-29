@@ -187,6 +187,21 @@ void PostOrder(node *root)
     cout << temp->data << " ";
 }
 
+int height(node *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+
+    int left = height(root->left);
+    int right = height(root->right);
+
+    int ans = max(left, right) + 1;
+
+    return ans;
+}
+
 int main()
 {
     node *root = NULL;
@@ -211,5 +226,8 @@ int main()
     cout << "InOrder Traversal " << endl;
     InOrder(root);
     cout << endl;
+
+    cout << "height of Tree or Depth of Tree is " << endl;
+    cout << height(root) << endl;
     return 0;
 }
