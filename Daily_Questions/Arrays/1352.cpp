@@ -1,34 +1,60 @@
-// https://leetcode.com/problems/product-of-the-last-k-numbers/description/?envType=daily-question&envId=2025-02-14
+// // https://leetcode.com/problems/product-of-the-last-k-numbers/description/?envType=daily-question&envId=2025-02-14
+
+
+// // class ProductOfNumbers {
+// //     private:
+// //         vector<int> prefixProducts;
+    
+// //     public:
+// //         ProductOfNumbers() {}
+    
+// //         void add(int num) {
+// //             if (num == 0) {
+// //                 prefixProducts.clear();
+// //             } else {
+// //                 if (prefixProducts.empty()) {
+// //                     prefixProducts.push_back(num);
+// //                 } else {
+// //                     prefixProducts.push_back(prefixProducts.back() * num);
+// //                 }
+// //             }
+// //         }
+    
+// //         int getProduct(int k) {
+// //             int n = prefixProducts.size();
+// //             if (k > n) {
+// //                 return 0;
+// //             }
+// //             if (k == n) {
+// //                 return prefixProducts.back();
+// //             }
+// //             return prefixProducts.back() / prefixProducts[n - k - 1];
+// //         }
+// //     };
+    
+// //     /**
+// //      * Your ProductOfNumbers object will be instantiated and called as such:
+// //      * ProductOfNumbers* obj = new ProductOfNumbers();
+// //      * obj->add(num);
+// //      * int param_2 = obj->getProduct(k);
+// //      */
 
 
 // class ProductOfNumbers {
-//     private:
-//         vector<int> prefixProducts;
-    
 //     public:
+//         vector<int> nums;
+    
 //         ProductOfNumbers() {}
     
-//         void add(int num) {
-//             if (num == 0) {
-//                 prefixProducts.clear();
-//             } else {
-//                 if (prefixProducts.empty()) {
-//                     prefixProducts.push_back(num);
-//                 } else {
-//                     prefixProducts.push_back(prefixProducts.back() * num);
-//                 }
-//             }
-//         }
+//         void add(int num) { nums.push_back(num); }
     
 //         int getProduct(int k) {
-//             int n = prefixProducts.size();
-//             if (k > n) {
-//                 return 0;
+//             int n = nums.size();
+//             int product = 1;
+//             for (int i = n - k; i < n; i++) {
+//                 product *= nums[i];
 //             }
-//             if (k == n) {
-//                 return prefixProducts.back();
-//             }
-//             return prefixProducts.back() / prefixProducts[n - k - 1];
+//             return product;
 //         }
 //     };
     
