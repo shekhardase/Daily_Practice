@@ -1,20 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void selectionSort(vector<int> &nums)
+void InsertionSort(vector<int> &nums, int i, int n)
 {
-    for (int i = 0; i < nums.size() - 1; i++)
+
+    if (i == n)
     {
-        int mini = i;
-        for (int j = i + 1; j < nums.size(); j++)
-        {
-            if (nums[mini] > nums[j])
-            {
-                mini = j;
-            }
-        }
-        swap(nums[i], nums[mini]);
+        return;
     }
+
+    int target = i;
+    while (target > 0 && nums[target] < nums[target - 1])
+    {
+        swap(nums[target], nums[target - 1]);
+        target--;
+    }
+
+    InsertionSort(nums, i + 1, n);
 }
 
 int main()
@@ -35,10 +37,13 @@ int main()
     }
     cout << endl;
 
-    cout << "After Sorting " << endl;
-    selectionSort(nums);
+    InsertionSort(nums, 0, n);
+
+    cout << "After Sorting" << endl;
     for (int i = 0; i < n; i++)
     {
         cout << nums[i] << " ";
     }
+    cout << endl;
+    return 0;
 }
