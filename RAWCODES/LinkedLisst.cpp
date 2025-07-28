@@ -14,6 +14,18 @@ public:
         this->data = data;
         this->next = NULL;
     }
+
+    ~node()
+    {
+        int value = this->data;
+        if (this->next != NULL)
+        {
+            delete next;
+            this->next = NULL;
+        }
+
+        cout << "Memory is free for node with data " << value << endl;
+    }
 };
 
 void insertAtHead(int data, node *&head)
@@ -69,54 +81,43 @@ void inserAtPosition(node *&head, node *&tail, int data, int position)
 }
 void deleteNode(node *&head, node *&tail, int position)
 {
-    if (position <= 0 || head == nullptr)
-    {
-        cout << "Invalid position\n";
-        return;
-    }
 
-    // Deleting the first node
     if (position == 1)
     {
         node *temp = head;
         head = head->next;
+        temp->next = NULL;
+        delete temp;
+    }
 
-        // If it was the only node
-        if (temp == tail)
+    else
+    {
+        // Traverse to (position - 1)-th node
+        int count = 1;
+        node *current = head;
+        node *prev = NULL;
+
+        while (count < position)
         {
-            tail = head; // could be NULL
+            prev = current;
+            current = current->next;
+            count++;
         }
 
-        delete temp;
-        return;
+        if (current == NULL)
+        {
+            cout << "Position out of bound " << endl;
+            return; 
+        }
+
+        if (current == tail)
+        {
+            tail = prev;
+        }
+        prev->next = current->next;
+        current->next = NULL;
+        delete current;
     }
-
-    // Traverse to (position - 1)-th node
-    int count = 1;
-    node *prev = head;
-    while (count < position - 1 && prev->next != nullptr)
-    {
-        prev = prev->next;
-        count++;
-    }
-
-    // If next is null, position is out of bounds
-    if (prev->next == nullptr)
-    {
-        cout << "Position out of bounds\n";
-        return;
-    }
-
-    node *current = prev->next;
-    prev->next = current->next;
-
-    // If deleting tail, update tail
-    if (current == tail)
-    {
-        tail = prev;
-    }
-
-    delete current;
 }
 
 int main()

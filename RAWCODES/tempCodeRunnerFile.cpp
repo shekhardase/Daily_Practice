@@ -1,3 +1,4 @@
- // deleteNode(head, 3);
-    // deleteNode(head, 5);
-    // deleteNode(head, 1);
+
+    // deleteNode(head, tail, 3);
+    // deleteNode(head, tail, 5);
+    // deleteNode(head, tail, 1);
