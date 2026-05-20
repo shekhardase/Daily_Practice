@@ -146,6 +146,41 @@ void ReverseLevelOrder(node *root)
 //     }
 // }
 
+void inorderTraversal(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+
+    inorderTraversal(root->left);
+    cout << root->data << " ";
+    inorderTraversal(root->right);
+}
+
+void preOrderTraversal(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+
+    cout << root->data << " ";
+    preOrderTraversal(root->left);
+    preOrderTraversal(root->right);
+}
+
+void postOrderTraversal(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    postOrderTraversal(root->left);
+    postOrderTraversal(root->right);
+    cout << root->data << " ";
+}
+
 node *buildTree(node *root)
 {
 
@@ -165,8 +200,41 @@ node *buildTree(node *root)
     root->left = buildTree(root->left);
     cout << "Enter data for inserting in right " << endl;
     root->right = buildTree(root->right);
-
     return root;
+}
+
+void buildFromLevelOrder(node *root)
+{
+    queue<node *> q;
+    cout << "Enter the data for root node " << endl;
+    int data;
+    cin >> data;
+    root = new node(data);
+    q.push(root);
+
+    while (!q.empty())
+    {
+        node *temp = q.front();
+        q.pop();
+        cout << "Enter left node : " << temp->data << endl;
+        int leftData;
+        cin >> leftData;
+
+        if (leftData != -1)
+        {
+            temp->left = new node(leftData);
+            q.push(temp->left);
+        }
+
+        cout << "Enter right node : " << temp->data << endl;
+        int rightData;
+        cin >> rightData;
+        if (rightData != -1)
+        {
+            temp->right = new node(rightData);
+            q.push(temp->right);
+        }
+    }
 }
 
 int main()
@@ -174,7 +242,7 @@ int main()
     node *root = NULL;
 
     // creating tree
-    root = buildTree(root);
+    root = buildTree(root); 
 
     // level order traversal
     cout << "Printing the level order traversal output " << endl;
@@ -184,6 +252,16 @@ int main()
     ReverseLevelOrder(root);
 
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    cout << endl;
+    cout << "Inorder Traversal" << endl;
+    inorderTraversal(root);
+    cout << endl;
+    cout << "Preorder Traversal" << endl;
+    preOrderTraversal(root);
+    cout << endl;
+    cout << "Postorder Traversal" << endl;
+    postOrderTraversal(root);
+    cout << endl;
 
     return 0;
 }
